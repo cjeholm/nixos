@@ -49,6 +49,7 @@
   # Environment variables
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
+    XCURSOR_SIZE = "32";
   };
 
   # Enable the X11 windowing system.
@@ -57,12 +58,11 @@
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
+  # Enable qtile
+  services.xserver.windowManager.qtile.enable = true;
 
   # HDPI
   services.xserver.dpi = 180;
-
-  # Enable qtile
-  services.xserver.windowManager.qtile.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
