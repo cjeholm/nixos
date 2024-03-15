@@ -49,7 +49,7 @@
   # Environment variables
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
-  }
+  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
