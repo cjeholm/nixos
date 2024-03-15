@@ -125,7 +125,7 @@
   htop
   qt5ct
   i3lock
-  # citrix_workspace_23_09_0
+  citrix_workspace_23_09_0
   ];
 
   fonts.packages = with pkgs; [
