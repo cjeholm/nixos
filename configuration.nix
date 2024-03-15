@@ -58,6 +58,9 @@
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
+  # HDPI
+  services.xserver.dpi = 180;
+
   # Enable qtile
   services.xserver.windowManager.qtile.enable = true;
 
