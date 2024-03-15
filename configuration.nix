@@ -118,6 +118,7 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   alacritty
   qtile
+  wget
   neovim
   xclip
   git
@@ -131,12 +132,16 @@
   qt5ct
   i3lock
   citrix_workspace_23_09_0
+  zsh-powerlevel10k
   ];
 
   fonts.packages = with pkgs; [
   iosevka
   ];
 
+  # Set default shell
+  users.defaultUserShell = pkgs.zsh;
+  
   # zsh stuff
   programs.zsh = {
     enable = true;
