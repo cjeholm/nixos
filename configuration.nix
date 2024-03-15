@@ -136,7 +136,7 @@
   programs.zsh = {
     enable = true;
     autosuggestions.enable = true;
-    completion.enable = true;
+    enableCompletion = true;
     syntaxHighlighting.enable = true;
   };
   # Some programs need SUID wrappers, can be configured further or are
