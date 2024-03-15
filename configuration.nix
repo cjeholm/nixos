@@ -13,6 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.gfxmodeEfi = "1280x1024";
   boot.kernelParams = [ "nomodeset" ];
 
   networking.hostName = "nixos"; # Define your hostname.
