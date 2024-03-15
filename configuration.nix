@@ -134,9 +134,13 @@
 
   # zsh stuff
   programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    enableCompletion = true;
+    enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
+    historySubstringSearch = {
+      enable = true;
+      searchUpKey = ["\\eOA"];
+      searchDownKey = ["\\eOB"];
+    };
   };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
