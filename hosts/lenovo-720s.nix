@@ -4,7 +4,7 @@
 
   imports =
     [ # Import common settings
-      ./../common.nix
+      ./common.nix
     ];
 
   # HDPI for laptop monitor
