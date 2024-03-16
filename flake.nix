@@ -31,7 +31,7 @@
         inherit system;
         modules = [
           ./configuration.nix
-          ./hunj.nix
+          ./nyancat.nix
         ];
       };
 
