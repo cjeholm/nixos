@@ -14,13 +14,8 @@
     XCURSOR_SIZE = "64";
   };
 
-
   # Enable qtile
   services.xserver.windowManager.qtile.enable = true;
-
-  # HDPI
-  services.xserver.dpi = 180;
-
 
   # Cursor settings - doesnt work
   # Xcursor.theme: Adwaita
@@ -30,7 +25,6 @@
 # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   alacritty
   qtile
   wget
@@ -68,4 +62,4 @@
     syntaxHighlighting.enable = true;
   };
 
-};
+}

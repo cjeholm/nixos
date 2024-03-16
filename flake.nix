@@ -24,6 +24,7 @@
         inherit system;
         modules = [
           ./common.nix
+          ./hosts/lenovo-720s.nix
         ];
       };
 
