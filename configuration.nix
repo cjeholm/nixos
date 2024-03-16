@@ -46,29 +46,12 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
-  # Environment variables
-  environment.variables = {
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-    XCURSOR_SIZE = "64";
-  };
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
-  # Enable qtile
-  services.xserver.windowManager.qtile.enable = true;
-
-  # HDPI
-  services.xserver.dpi = 180;
-
-
-  # Cursor settings - doesnt work
-  # Xcursor.theme: Adwaita
-  # Xcursor.size: 36
-  # xserver.cursor.size = 40;
 
   # Configure keymap in X11
   services.xserver = {
@@ -121,42 +104,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  alacritty
-  qtile
-  wget
-  neovim
-  xclip
-  git
-  eza
-  zsh
-  stow
-  gcc
-  rofi
-  neofetch
-  htop
-  qt5ct
-  i3lock
-  citrix_workspace_23_09_0
-  zsh-powerlevel10k
-  tldr
-  ];
+    ];
 
-  fonts.packages = with pkgs; [
-  iosevka
-  ];
-
-  # Set default shell
-  users.defaultUserShell = pkgs.zsh;
-  
-  # zsh stuff
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    zsh-autoenv.enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-  };
-  # Some programs need SUID wrappers, can be configured further or are
+    # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {

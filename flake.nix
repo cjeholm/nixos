@@ -23,14 +23,14 @@
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./configuration.nix
+          ./common.nix
         ];
       };
 
       nyancat = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./configuration.nix
+          ./common.nix
           ./nyancat.nix
         ];
       };
