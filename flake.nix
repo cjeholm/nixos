@@ -19,12 +19,23 @@
 
     nixosConfigurations = {
 # TODO please change the hostname to your own
+
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration.nix
         ];
       };
+
+      hunj = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration.nix
+          ./hunj.nix
+        ];
+      };
+
+
     };
 
   };
