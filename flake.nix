@@ -1,14 +1,13 @@
 {
-  description = "NixOS configuration";
+  description = "Conny Holms NixOs Config";
 
   inputs = {
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-#    home-manager.url = "github:nix-community/home-manager/release-23.11";
-#    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # home-manager.url = "github:nix-community/home-manager/release-23.11";
+    # home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-#  outputs = { nixpkgs, home-manager, ... }: 
   outputs = { nixpkgs, ... }: 
 
     let
@@ -18,6 +17,7 @@
     in {
 
     nixosConfigurations = {
+
 # TODO please change the hostname to your own
 
       nixos = nixpkgs.lib.nixosSystem {
@@ -27,7 +27,7 @@
         ];
       };
 
-      hunj = nixpkgs.lib.nixosSystem {
+      nyancat = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./configuration.nix
