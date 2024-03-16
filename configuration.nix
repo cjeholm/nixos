@@ -13,7 +13,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  #  boot.loader.grub.gfxmodeEfi = "1280x1024";
   boot.kernelParams = [ "nomodeset" ];
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -50,7 +49,7 @@
   # Environment variables
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
-    XCURSOR_SIZE = "32";
+    XCURSOR_SIZE = "64";
   };
 
   # Enable the X11 windowing system.
@@ -64,6 +63,12 @@
 
   # HDPI
   services.xserver.dpi = 180;
+
+
+  # Cursor settings - doesnt work
+  # Xcursor.theme: Adwaita
+  # Xcursor.size: 36
+  # xserver.cursor.size = 40;
 
   # Configure keymap in X11
   services.xserver = {
@@ -133,6 +138,7 @@
   i3lock
   citrix_workspace_23_09_0
   zsh-powerlevel10k
+  tldr
   ];
 
   fonts.packages = with pkgs; [
