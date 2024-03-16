@@ -23,20 +23,17 @@
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./common.nix
           ./hosts/lenovo-720s.nix
         ];
       };
 
-      nyancat = nixpkgs.lib.nixosSystem {
+      nixos-vm = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./common.nix
-          ./nyancat.nix
+          ./hosts/nixos-vm.nix
         ];
       };
-
-
+ 
     };
 
   };
