@@ -40,7 +40,6 @@
   htop
   qt5ct
   i3lock
-  citrix_workspace_23_09_0
   zsh-powerlevel10k
   tldr
   ];
