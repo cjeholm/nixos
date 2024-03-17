@@ -18,9 +18,15 @@
 
     nixosConfigurations = {
 
-# TODO please change the hostname to your own
+# Configurrations by hostname or '--flake .#name'
 
       nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/common.nix
+        ];
+ 
+      HolmLaptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/lenovo-720s.nix
