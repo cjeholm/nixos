@@ -11,7 +11,6 @@
   # Environment variables
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
-    XCURSOR_SIZE = "64";
   };
 
   # Enable qtile

@@ -7,6 +7,11 @@
       ./common.nix
     ];
 
+  # Environment variables
+  environment.variables = {
+    XCURSOR_SIZE = "64";
+  };
+
   # HDPI for laptop monitor
   services.xserver.dpi = 180;
 
