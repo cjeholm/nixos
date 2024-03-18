@@ -61,4 +61,8 @@
     # syntaxHighlighting.enable = true;
   };
 
+  # zsh-autocomplete
+  programs.zsh-autocomplete = {
+    enable = true;
+  };
 }
