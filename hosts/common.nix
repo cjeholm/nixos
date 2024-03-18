@@ -32,6 +32,7 @@
   git
   eza
   fish
+  starship
   stow
   gcc
   rofi
