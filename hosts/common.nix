@@ -41,6 +41,7 @@
   i3lock
   zsh-powerlevel10k
   tldr
+  zsh-autocomplete
   ];
 
   # Fonts
@@ -54,10 +55,10 @@
   # zsh stuff
   programs.zsh = {
     enable = true;
-    autosuggestions.enable = true;
-    zsh-autoenv.enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
+    # autosuggestions.enable = true;
+    # zsh-autoenv.enable = true;
+    # enableCompletion = true;
+    # syntaxHighlighting.enable = true;
   };
 
 }
