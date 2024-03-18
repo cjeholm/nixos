@@ -52,30 +52,13 @@
   # Set default shell
   users.defaultUserShell = pkgs.zsh;
 
-  programs.zsh = {
-   enable = true;
-   defaultKeymap = "emacs";
-   enableAutosuggestions = true;
-   syntaxHighlighting.enable = true;
-   historySubstringSearch = {
-    enable = true;
-    searchUpKey = ["\\eOA"];
-    searchDownKey = ["\\eOB"];
-   };
-   
-   enableCompletion = true;
-   initExtra = ''
-   setopt NO_CASE_GLOB
-   zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=*      r:|=*' 'l:|=* r:|=*'
-   '';
-   };
   # zsh stuff
-  # programs.zsh = {
-  #   enable = true;
-  #   autosuggestions.enable = true;
-  #   zsh-autoenv.enable = true;
-  #   enableCompletion = true;
-  #   syntaxHighlighting.enable = true;
-  # };
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    zsh-autoenv.enable = true;
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+  };
 
 }
