@@ -31,9 +31,6 @@
   xclip
   git
   eza
-  # zsh
-  # zsh-powerlevel10k
-  # zsh-autocomplete
   fish
   stow
   gcc
@@ -54,15 +51,7 @@
   # users.defaultUserShell = pkgs.zsh;
   users.defaultUserShell = pkgs.fish;
 
-  # fish stuff
+  # Set default shell
   programs.fish.enable = true;
-  # zsh stuff
-  # programs.zsh = {
-  #   enable = true;
-  #   autosuggestions.enable = true;
-  #   zsh-autoenv.enable = true;
-  #   enableCompletion = true;
-  #   syntaxHighlighting.enable = true;
-  # };
 
 }
