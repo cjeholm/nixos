@@ -26,6 +26,13 @@
           ./hosts/common.nix
         ];
       };
+
+      HolmDesktop = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/desktop.nix
+        ];
+      };
  
       HolmLaptop = nixpkgs.lib.nixosSystem {
         inherit system;
