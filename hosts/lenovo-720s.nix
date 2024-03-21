@@ -23,6 +23,8 @@
   libreoffice
   chirp
   sdrangel
+  wine64 # For Adobe DNG
+  wineWowPackages.stable # For Adobe DNG. 
   ];
 
   # Syncthing
