@@ -13,14 +13,14 @@
   # Monitor order
   services.xserver.xrandrHeads = [
     {
-      output = "HDMI-2";
+      output = "HDMI-0";
       monitorConfig = ''
         Option "PreferredMode" "1920x1200"
         Option "LeftOf" "DP-1"
       '';
     }
     {
-      output = "DP-1";
+      output = "DP-3";
       monitorConfig = ''
         Option "PreferredMode" "1920x1080"
         Option "RightOf" "HDMI-2"
