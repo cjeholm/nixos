@@ -7,6 +7,23 @@
       ./common.nix
     ];
 
+  # Monitor order
+xrandrHeads = [
+  {
+    output = "HDMI-2";
+    monitorConfig = ''
+      Option "PreferredMode" "1920x1200"
+    '';
+  }
+  {
+    output = "DP-1";
+    monitorConfig = ''
+      Option "PreferredMode" "1920x1080"
+    '';
+  }
+];
+
+  
   # Host specific packages
   environment.systemPackages = with pkgs; [
   # citrix_workspace_23_09_0
