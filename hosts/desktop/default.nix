@@ -4,7 +4,8 @@
 
   imports =
     [ # Import common settings
-      ./common.nix
+      ./configuration.nix
+      ../../common/common.nix
     ];
 
 

@@ -2,10 +2,10 @@
 
 {
 
-  imports =
-    [ # Include the results of the hardware scan.
-      ./../configuration.nix
-    ];
+#   imports =
+#     [ # Include the results of the hardware scan.
+#       ./../configuration.nix
+#     ];
 
 
   # Environment variables

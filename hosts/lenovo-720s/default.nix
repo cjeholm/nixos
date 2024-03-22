@@ -4,9 +4,9 @@
 
   imports =
     [ # Import common settings
-      ./common.nix
+      ./configuration.nix
+      ../../common/common.nix
     ];
-
 
   # Environment variables
   environment.variables = {
