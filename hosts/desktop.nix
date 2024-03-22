@@ -23,12 +23,6 @@
     }
   ];
 
-  # RAID setup
-  services.mdadm = {
-    enable = true;
-    devices = [ "/dev/md0" ];
-  };
-  
   # Host specific packages
   environment.systemPackages = with pkgs; [
   # citrix_workspace_23_09_0
@@ -38,6 +32,8 @@
   sdrangel
   wine64 # For Adobe DNG
   wineWowPackages.stable # For Adobe DNG. 
+  mdadm
+  steam
   ];
 
   # Syncthing
