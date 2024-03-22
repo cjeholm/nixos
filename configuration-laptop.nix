@@ -13,8 +13,9 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = [ "nomodeset" ];
 
-  networking.hostName = "HolmDesktop"; # Define your hostname.
+  networking.hostName = "HolmLaptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -23,7 +24,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
+  
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -45,17 +46,25 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
+  # Environment variables
+  environment.variables = {
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    XCURSOR_SIZE = "64";
+  };
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
+  # Enable qtile
+  services.xserver.windowManager.qtile.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "se";
-    xkbVariant = "";
+    xkb.layout = "se";
+    xkb.variant = "";
   };
 
   # Configure console keymap
@@ -103,11 +112,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-     git
-  ];
+ ];
 
-  # Some programs need SUID wrappers, can be configured further or are
+ # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
