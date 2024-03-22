@@ -23,6 +23,11 @@
     }
   ];
 
+  # RAID setup
+  services.mdadm = {
+    enable = true;
+    devices = [ "/dev/md0" ];
+  };
   
   # Host specific packages
   environment.systemPackages = with pkgs; [
