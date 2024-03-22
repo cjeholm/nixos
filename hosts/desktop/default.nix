@@ -37,7 +37,7 @@
   wineWowPackages.stable # For Adobe DNG. 
   mdadm
   steam
-  backintime
+  # backintime
   ];
 
   # Steam
