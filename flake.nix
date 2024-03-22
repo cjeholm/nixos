@@ -30,21 +30,21 @@
       HolmDesktop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./hosts/desktop/
+          ./hosts/desktop
         ];
       };
  
       HolmLaptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./hosts/lenovo-720s/
+          ./hosts/lenovo-720s
         ];
       };
 
       nixos-vm = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./hosts/nixos-vm/
+          ./hosts/nixos-vm
         ];
       };
  
