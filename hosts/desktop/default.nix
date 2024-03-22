@@ -10,20 +10,18 @@
       ../../common/common.nix
     ];
 
-  # Monitor order
+  # Monitor order. The names of the outputs can change when Nvidia driver is installed.
   services.xserver.xrandrHeads = [
     {
       output = "HDMI-0";
       monitorConfig = ''
         Option "PreferredMode" "1920x1200"
-        Option "LeftOf" "DP-1"
       '';
     }
     {
       output = "DP-3";
       monitorConfig = ''
         Option "PreferredMode" "1920x1080"
-        Option "RightOf" "HDMI-2"
       '';
     }
   ];
