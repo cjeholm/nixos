@@ -16,12 +16,14 @@
       output = "HDMI-2";
       monitorConfig = ''
         Option "PreferredMode" "1920x1200"
+        Option "LeftOf" "DP-1"
       '';
     }
     {
       output = "DP-1";
       monitorConfig = ''
         Option "PreferredMode" "1920x1080"
+        Option "RightOf" "HDMI-2"
       '';
     }
   ];
