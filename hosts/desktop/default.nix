@@ -37,10 +37,12 @@
   wineWowPackages.stable # For Adobe DNG. 
   mdadm
   steam
-  # backintime
+  backintime
   ];
 
   # Steam
   programs.steam.enable = true;
 
+  # Cron - for Backintime
+  services.cron.enable = true;
 }
