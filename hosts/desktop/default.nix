@@ -5,7 +5,7 @@
   imports =
     [ # Import common settings
       ./configuration.nix
-      ../../common/syncthing.nix
+    # ../../common/syncthing.nix
       ../../common/nvidia.nix
       ../../common/common.nix
     ];
@@ -47,6 +47,9 @@
   mdadm # RAID management
   steam
   backintime
+  gimp
+  rawtherapee
+  obs-studio
   ];
 
   # Steam
