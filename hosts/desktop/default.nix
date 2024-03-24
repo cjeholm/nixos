@@ -44,7 +44,7 @@
   sdrangel
   wine64 # For Adobe DNG
   wineWowPackages.stable # For Adobe DNG. 
-  mdadm
+  mdadm # RAID management
   steam
   backintime
   ];
@@ -54,4 +54,9 @@
 
   # Cron - needed for Backintime
   services.cron.enable = true;
+
+  # Enable Linux MD RAID arrays.
+  # When this is enabled, mdadm will be added to the system path, and MD RAID arrays will be detected and activated automatically, both in stage-1 (initramfs) and in stage-2 (the final NixOS system).
+  #This should be enabled if you want to be able to access and/or boot from MD RAID arrays. nixos-generate-config should detect it correctly in the standard installation procedure
+  boot.swraid.enable = true;
 }
