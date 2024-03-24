@@ -37,7 +37,7 @@
 
   # Host specific packages
   environment.systemPackages = with pkgs; [
-  # citrix_workspace_23_09_0
+  citrix_workspace_23_09_0
   syncthing
   libreoffice
   chirp
