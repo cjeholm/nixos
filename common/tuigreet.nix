@@ -7,7 +7,7 @@
     settings = {
       default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd qtile start";
-        user = "conny";
+        user = "greeter";
       };
     };
   };
