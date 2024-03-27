@@ -7,7 +7,7 @@
       ./configuration.nix
       ../../common/syncthing.nix
       ../../common/common.nix
-      ../../common/tuigreet.nix
+    # ../../common/tuigreet.nix
     ];
 
   # Environment variables
