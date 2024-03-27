@@ -31,7 +31,8 @@
   qtile
   wget
   neovim
-  xclip
+  # xclip
+  xsel # Alt to xclip
   git
   eza
   fish
@@ -45,6 +46,7 @@
   i3lock
   tldr
   steam-run # This un-free package is a non-Nix way of running programs in a faked FHS-layout. I'm using this for NeoVim's MasonInstall of python and lua LSP until I've configured a Nix way of doing it.
+  mqttui
   ];
 
   # Fonts
