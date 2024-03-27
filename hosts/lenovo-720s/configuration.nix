@@ -46,11 +46,6 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
-  # Environment variables
-  environment.variables = {
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-    XCURSOR_SIZE = "64";
-  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;

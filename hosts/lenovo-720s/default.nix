@@ -11,7 +11,8 @@
 
   # Environment variables
   environment.variables = {
-    XCURSOR_SIZE = "64";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    XCURSOR_SIZE = "32";
   };
 
   # HDPI for laptop monitor
