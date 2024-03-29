@@ -50,6 +50,7 @@
   gimp
   rawtherapee
   obs-studio
+  # spotify
   ];
 
   # Steam
