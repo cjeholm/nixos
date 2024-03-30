@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-stable, ... }:
 
 {
 
@@ -26,28 +26,35 @@
 
 # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  alacritty
-  qtile
-  wget
-  neovim
-  # xclip
-  xsel # Alt to xclip
-  git
-  eza
-  fish
-  starship
-  stow
-  gcc
-  rofi
-  neofetch
-  htop
-  qt5ct
-  i3lock
-  tldr
-  steam-run # This un-free package is a non-Nix way of running programs in a faked FHS-layout. I'm using this for NeoVim's MasonInstall of python and lua LSP until I've configured a Nix way of doing it.
-  mqttui
-  ];
+  environment.systemPackages = 
+  (with pkgs; [
+    alacritty
+    qtile
+    wget
+    neovim
+    # xclip
+    xsel # Alt to xclip
+    git
+    eza
+    fish
+    starship
+    stow
+    gcc
+    rofi
+    neofetch
+    htop
+    qt5ct
+    i3lock
+    tldr
+    steam-run # This un-free package is a non-Nix way of running programs in a faked FHS-layout. I'm using this for NeoVim's MasonInstall of python and lua LSP until I've configured a Nix way of doing it.
+    mqttui
+  ])
+
+  ++
+
+  (with pkgs-stable; [
+    xz
+  ]);
 
   # Fonts
   fonts.packages = with pkgs; [
