@@ -26,8 +26,7 @@
 
 # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = 
-  (with pkgs; [
+  environment.systemPackages = with pkgs; [
     alacritty
     qtile
     wget
@@ -48,13 +47,9 @@
     tldr
     steam-run # This un-free package is a non-Nix way of running programs in a faked FHS-layout. I'm using this for NeoVim's MasonInstall of python and lua LSP until I've configured a Nix way of doing it.
     mqttui
-  ])
 
-  ++
-
-  (with pkgs-stable; [
-    xz
-  ]);
+    pkgs-stable.xz
+  ];
 
   # Fonts
   fonts.packages = with pkgs; [
