@@ -56,7 +56,7 @@
   # iosevka
   # ];
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "iosevka" ]; })
+    (nerdfonts.override { fonts = [ "Iosevka" ]; })
   ];
 
   # Set default shell
