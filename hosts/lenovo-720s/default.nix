@@ -5,9 +5,9 @@
   imports =
     [ # Import common settings
       ./configuration.nix
-      ../../common/syncthing.nix
+    # ../../common/syncthing.nix
       ../../common/common.nix
-    #../../common/tuigreet.nix
+    # ../../common/tuigreet.nix
     ];
 
   # Environment variables
@@ -21,14 +21,13 @@
 
   # Host specific packages
   environment.systemPackages = with pkgs; [
-  citrix_workspace_23_09_0
-  syncthing
-  libreoffice
-  chirp
-  sdrangel
-  wine64 # For Adobe DNG
-  wineWowPackages.stable # For Adobe DNG. 
-  krita
+    citrix_workspace_23_09_0
+    libreoffice
+    chirp
+    sdrangel
+    wine64 # For Adobe DNG
+    wineWowPackages.stable # For Adobe DNG. 
+    krita
   ];
 
 }

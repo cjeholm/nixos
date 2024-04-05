@@ -2,7 +2,12 @@
 
 {
 
-  # Syncthing
+  # Add Syncthing package
+  environment.systemPackages = with pkgs; [
+    syncthing
+  ];
+
+  # Enable and set up Syncthing
   services.syncthing = {
     enable = true;
     user = "conny";
