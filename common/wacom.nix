@@ -2,5 +2,5 @@
 
 {
   # Enable Wacom tablet
-  xserver.wacom.enable = true;
+  serviecs.xserver.wacom.enable = true;
 }
