@@ -4,7 +4,7 @@
 
   imports =
     [
-      neovim.nix
+      ./neovim.nix
     ];
 
 
