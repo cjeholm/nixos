@@ -2,10 +2,10 @@
 
 {
 
-#   imports =
-#     [ # Include the results of the hardware scan.
-#       ./../configuration.nix
-#     ];
+  imports =
+    [
+      neovim.nix
+    ];
 
 
   # Environment variables
@@ -31,8 +31,7 @@
     qtile
     wget
     neovim
-    # xclip
-    xsel # Alt to xclip
+    xsel
     git
     eza
     fish
