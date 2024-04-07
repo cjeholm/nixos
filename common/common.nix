@@ -50,11 +50,8 @@
   ];
 
   # Fonts
-  # fonts.packages = with pkgs; [
-  # iosevka
-  # ];
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "0xProto" ]; })
+    (nerdfonts.override { fonts = [ "IBMPlexMono" ]; })
   ];
 
   # Set default shell
