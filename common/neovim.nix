@@ -5,5 +5,6 @@
     neovim
     python311Packages.python-lsp-server
     lua-language-server
+    pylint
   ];
 }
