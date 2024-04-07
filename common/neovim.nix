@@ -4,5 +4,6 @@
   environment.systemPackages = with pkgs; [
     neovim
     python311Packages.python-lsp-server
+    lua-language-server
   ];
 }
