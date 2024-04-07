@@ -4,7 +4,7 @@
 
   imports =
     [
-      ./neovim.nix
+      ./neovim.nix  # Neovim and my LSP and linting stuff.
     ];
 
 
@@ -44,7 +44,6 @@
     qt5ct
     i3lock
     tldr
-    steam-run # This un-free package is a non-Nix way of running programs in a faked FHS-layout. I'm using this for NeoVim's MasonInstall of python and lua LSP until I've configured a Nix way of doing it.
     mqttui
 
     pkgs-stable.xz
