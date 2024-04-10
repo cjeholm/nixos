@@ -46,7 +46,7 @@
     tldr
     mqttui
 
-    pkgs-stable.xz
+    # pkgs-stable.xz
   ];
 
   # Fonts
