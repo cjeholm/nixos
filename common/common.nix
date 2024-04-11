@@ -40,10 +40,11 @@
     gcc
     rofi
     neofetch
-    htop
+    btop
     qt5ct
     i3lock
     tldr
+    bat
     mqttui
 
     # pkgs-stable.xz
