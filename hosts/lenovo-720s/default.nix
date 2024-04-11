@@ -8,6 +8,7 @@
     # ../../common/syncthing.nix
       ../../common/common.nix
     # ../../common/tuigreet.nix
+      ../../common/bluetooth.nix
     ];
 
   # Environment variables

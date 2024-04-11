@@ -10,6 +10,7 @@
       ../../common/common.nix
       ../../common/wacom.nix
       ../../common/printer.nix
+      ../../common/bluetooth.nix
     ];
 
   # Set hdd spindown timer. The value of 0 disables spindown, the values from 1 to 240 specify multiples of 5 seconds and values from 241 to 251 specify multiples of 30 minutes.
