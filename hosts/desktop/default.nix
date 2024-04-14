@@ -53,6 +53,7 @@
   rawtherapee
   obs-studio
   krita
+  blender
 
   # spotify
   ];
