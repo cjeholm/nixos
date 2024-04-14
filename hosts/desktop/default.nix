@@ -53,7 +53,7 @@
   rawtherapee
   obs-studio
   krita
-  # blender
+  blockbench
   (blender.override { cudaSupport = true; })
   # spotify
   ];
