@@ -56,6 +56,7 @@
   blockbench
   (blender.override { cudaSupport = true; })
   # spotify
+  inkscape
   ];
 
 

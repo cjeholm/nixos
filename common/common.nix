@@ -46,6 +46,7 @@
     tldr
     bat
     mqttui
+    filezilla
 
     # pkgs-stable.xz
   ];
