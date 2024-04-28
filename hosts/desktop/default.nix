@@ -62,7 +62,10 @@
   ];
 
   # Openrazer for RGB
-  hardware.openrazer.enable = true;
+  hardware.openrazer = {
+    enable = true;
+    users = [ "conny" ];
+  };
 
   # Steam
   programs.steam.enable = true;
