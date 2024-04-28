@@ -57,8 +57,12 @@
   (blender.override { cudaSupport = true; })
   # spotify
   inkscape
+  python311Packages.openrazer       # Control mouse and keyboard RGB
+  polychromatic
   ];
 
+  # Openrazer for RGB
+  hardware.openrazer.enable = true;
 
   # Steam
   programs.steam.enable = true;
