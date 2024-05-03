@@ -5,6 +5,7 @@
   imports =
     [ # Import common settings
       ./configuration.nix
+      ../../common/i915.nix
     # ../../common/syncthing.nix
       ../../common/common.nix
     # ../../common/tuigreet.nix
