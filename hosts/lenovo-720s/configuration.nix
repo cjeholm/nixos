@@ -15,6 +15,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = [ "nomodeset" ];
 
+  # Possible fix for screen flickering with modesetting. Didn't work but keeping it here.
+  # boot.kernelParams = [ "intel_idle.max_cstate=4" ];
+
   networking.hostName = "HolmLaptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
