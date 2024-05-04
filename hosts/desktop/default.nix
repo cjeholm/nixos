@@ -59,6 +59,7 @@
   inkscape
   openrazer-daemon # Control mouse and keyboard RGB
   polychromatic
+  filelight
   ];
 
   # Openrazer for RGB
