@@ -16,8 +16,8 @@
   # Set hdd spindown timer. The value of 0 disables spindown, the values from 1 to 240 specify multiples of 5 seconds and values from 241 to 251 specify multiples of 30 minutes.
   powerManagement.powerUpCommands = ''
     ${pkgs.hdparm}/sbin/hdparm -S 24 /dev/sda
-    ${pkgs.hdparm}/sbin/hdparm -S 24 /dev/sdb
     ${pkgs.hdparm}/sbin/hdparm -S 24 /dev/sdc
+    ${pkgs.hdparm}/sbin/hdparm -S 24 /dev/sdd
     ${pkgs.hdparm}/sbin/hdparm -S 24 /dev/sde
     ${pkgs.hdparm}/sbin/hdparm -S 24 /dev/sdf
   '';
