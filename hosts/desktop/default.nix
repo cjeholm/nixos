@@ -27,13 +27,7 @@
     {
       output = "HDMI-0";
       monitorConfig = ''
-        Option "PreferredMode" "1920x1200"
-      '';
-    }
-    {
-      output = "DP-3";
-      monitorConfig = ''
-        Option "PreferredMode" "1920x1080"
+        Option "PreferredMode" "3440x1440"
       '';
     }
   ];
