@@ -54,6 +54,8 @@
   openrazer-daemon # Control mouse and keyboard RGB
   polychromatic
   filelight
+  vlc
+  v4l-utils
   ];
 
   # Openrazer for RGB
