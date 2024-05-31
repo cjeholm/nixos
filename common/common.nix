@@ -47,7 +47,6 @@
     bat
     mqttui
     filezilla
-    displaycal
 
     # pkgs-stable.xz
   ];
