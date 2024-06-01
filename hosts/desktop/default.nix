@@ -11,6 +11,7 @@
       ../../common/printer.nix
       ../../common/bluetooth.nix
       ../../common/displaycal.nix
+      ../../common/polychromatic.nix
     ];
 
   # Set hdd spindown timer. The value of 0 disables spindown, the values from 1 to 240 specify multiples of 5 seconds and values from 241 to 251 specify multiples of 30 minutes.
@@ -51,18 +52,11 @@
   (blender.override { cudaSupport = true; })
   # spotify
   inkscape
-  openrazer-daemon # Control mouse and keyboard RGB
-  polychromatic
   filelight
   vlc
   v4l-utils
   ];
 
-  # Openrazer for RGB
-  hardware.openrazer = {
-    enable = true;
-    users = [ "conny" ];
-  };
 
   # Enable Wacom tablet
   services.xserver.wacom.enable = true;
