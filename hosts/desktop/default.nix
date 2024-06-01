@@ -8,7 +8,6 @@
     # ../../common/syncthing.nix
       ../../common/nvidia.nix
       ../../common/common.nix
-      ../../common/wacom.nix
       ../../common/printer.nix
       ../../common/bluetooth.nix
       ../../common/displaycal.nix
@@ -64,6 +63,9 @@
     enable = true;
     users = [ "conny" ];
   };
+
+  # Enable Wacom tablet
+  services.xserver.wacom.enable = true;
 
   # Steam
   programs.steam.enable = true;
