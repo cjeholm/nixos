@@ -57,6 +57,8 @@
   v4l-utils
   ];
 
+  # Enable OpenRGB
+  services.hardware.openrgb.enable = true;
 
   # Enable Wacom tablet
   services.xserver.wacom.enable = true;
