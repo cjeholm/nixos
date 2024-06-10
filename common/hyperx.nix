@@ -18,14 +18,14 @@ in
 
 # Enable the script to run at startup.
 
-  systemd.services.hyperx-rgb = {
-    description = "HyperX Quadcast S RGB";
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      ExecStart = "${pkgs.bash}/bin/bash ${hyperx-rgb}/bin/hyperx-rgb";
-      # ExecStart = "${pkgs.bash}/bin/bash hyperx-rgb";
-      # Restart = "on-failure";
-      Type = "oneshot";
-    };
-  };
+#  systemd.services.hyperx-rgb = {
+#    description = "HyperX Quadcast S RGB";
+#    wantedBy = [ "multi-user.target" ];
+#    serviceConfig = {
+#      ExecStart = "${pkgs.bash}/bin/bash ${hyperx-rgb}/bin/hyperx-rgb";
+#      # ExecStart = "${pkgs.bash}/bin/bash hyperx-rgb";
+#      # Restart = "on-failure";
+#      Type = "oneshot";
+#    };
+#  };
 }
