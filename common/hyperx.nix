@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
-hyperx-rgb = import ../scripts/hyperx-rgb.nix { inherit pkgs; };
+hyperx-rgb = pkgs.writeShellScriptBin "hyperx-rgb" ''
+  ${pkgs.openrgb}/bin/openrgb --device "HyperX Quadcast S" --color 00FFFF
+'';
 in 
 
 {
@@ -15,15 +17,15 @@ in
   services.hardware.openrgb.enable = true;
 
 # Enable the script to run at startup.
-# THIS IS BROKEN
 
   systemd.services.hyperx-rgb = {
     description = "HyperX Quadcast S RGB";
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
-      ExecStart = "${pkgs.bash}/bin/bash hyperx-rgb";
+      ExecStart = "${pkgs.bash}/bin/bash ${hyperx-rgb}/bin/hyperx-rgb";
       # ExecStart = "${pkgs.bash}/bin/bash hyperx-rgb";
-      Restart = "on-failure";
+      # Restart = "on-failure";
+      Type = "oneshot";
     };
   };
 }
