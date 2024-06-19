@@ -1,10 +1,10 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
-let
-start-qtile = pkgs.writeShellScriptBin "start-qtile" ''
-  ${pkgs.qtile}/bin/qtile start
-'';
-in 
+# let
+# start-qtile = pkgs.writeShellScriptBin "start-qtile" ''
+#   ${pkgs.qtile}/bin/qtile start
+# '';
+# in 
 
 {
 
@@ -12,7 +12,7 @@ in
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd ${start-qtile}/bin/start-qtile";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd ${qtile}/bin/qtile start";
         user = "greeter";
       };
     };
@@ -21,9 +21,13 @@ in
   environment.systemPackages = with pkgs; [
   greetd.greetd
   greetd.tuigreet
-  start-qtile
+#  start-qtile
   ];
 
-# services.displayManager.sddm.enable = false;
+services.xserver = {
+  enable = true;
+  windowManager.qtile.enable = true;
+  displayManager.defaultSession = "none+qtile";
+};
 
 }
