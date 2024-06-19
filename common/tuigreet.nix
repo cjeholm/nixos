@@ -24,6 +24,6 @@ in
   start-qtile
   ];
 
-services.displayManager.sddm.enable = false;
+# services.displayManager.sddm.enable = false;
 
 }
