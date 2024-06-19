@@ -1,16 +1,9 @@
-{ config, pkgs, lib, ... }:
-
-let
-qtile-start = pkgs.writeShellScriptBin "qtile-start" ''
-  ${pkgs.qtile}/bin/qtile start
-'';
-in 
+{ config, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
     greetd.greetd
     greetd.tuigreet
-    qtile-start
   ];
 
   services.xserver.displayManager.startx.enable = true;
@@ -20,6 +13,8 @@ in
     settings = {
       default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --remember-session";
+        # I can not get the default choice to work!
+        # Workaround by using the --remember-session option
         # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd ${pkgs.qtile}/bin/qtile start";
         user = "greeter";
       };
