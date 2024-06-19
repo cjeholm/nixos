@@ -7,6 +7,13 @@ qtile-start = pkgs.writeShellScriptBin "qtile-start" ''
 in 
 
 {
+  environment.systemPackages = with pkgs; [
+    greetd.greetd
+    greetd.tuigreet
+    qtile-start
+  ];
+
+  services.xserver.displayManager.startx.enable = true;
 
   services.greetd = {
     enable = true;
@@ -18,19 +25,5 @@ in
       };
     };
   };
-
-environment.systemPackages = with pkgs; [
-  greetd.greetd
-  greetd.tuigreet
-  qtile-start
-];
-
-services.xserver.displayManager.startx.enable = true;
-
-# services.xserver = {
-#   enable = true;
-#   windowManager.qtile.enable = true;
-#   displayManager.defaultSession = "none+qtile";
-# };
 
 }
