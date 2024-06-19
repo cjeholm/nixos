@@ -19,7 +19,7 @@ in
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd ${qtile-start}/bin/qtile-start";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --remember-session";
         # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd ${pkgs.qtile}/bin/qtile start";
         user = "greeter";
       };
