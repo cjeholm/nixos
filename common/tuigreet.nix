@@ -1,11 +1,5 @@
 { config, pkgs, ... }:
 
-# let
-# start-qtile = pkgs.writeShellScriptBin "start-qtile" ''
-#   ${pkgs.qtile}/bin/qtile start
-# '';
-# in 
-
 {
 
   services.greetd = {
@@ -21,13 +15,14 @@
   environment.systemPackages = with pkgs; [
   greetd.greetd
   greetd.tuigreet
-#  start-qtile
   ];
 
-services.xserver = {
-  enable = true;
-  windowManager.qtile.enable = true;
-  displayManager.defaultSession = "none+qtile";
-};
+services.xserver.displayManager.startx.enable = true;
+
+# services.xserver = {
+#   enable = true;
+#   windowManager.qtile.enable = true;
+#   displayManager.defaultSession = "none+qtile";
+# };
 
 }
