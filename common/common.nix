@@ -47,6 +47,8 @@
     bat
     mqttui
     filezilla
+    file
+    gnumake
 
     # pkgs-stable.xz
   ];
