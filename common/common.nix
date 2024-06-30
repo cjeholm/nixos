@@ -1,5 +1,10 @@
 { config, pkgs, pkgs-stable, ... }:
 
+let
+    scrot-screen = import ../scripts/scrot-screen.nix { inherit pkgs; };
+    scrot-window = import ../scripts/scrot-window.nix { inherit pkgs; };
+in 
+
 {
 
   imports =
@@ -27,6 +32,8 @@
 # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    scrot-screen
+    scrot-window
     alacritty
     qtile
     wget
