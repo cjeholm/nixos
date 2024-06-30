@@ -30,7 +30,6 @@
     alacritty
     qtile
     wget
-    neovim
     xsel
     git
     eza
@@ -49,6 +48,7 @@
     filezilla
     file
     gnumake
+    scrot
 
     # pkgs-stable.xz
   ];
