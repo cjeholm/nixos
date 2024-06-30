@@ -11,7 +11,7 @@ environment.systemPackages = with pkgs; [
     
     python311Packages.python-lsp-server   # Python LSP server
     lua-language-server                   # Lua LSP server
-    vimPlugins.clangd_extensions-nvim     # C++ LSP server
+    clang-tools                           # C++ LSP server
   
     pylint                # Linting for Python
     markdownlint-cli2     # Linting for markdown
