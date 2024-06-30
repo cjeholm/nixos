@@ -1,10 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    
-    neovim
 
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
+environment.systemPackages = with pkgs; [
+    
     python311Packages.python-lsp-server   # Python LSP server
     lua-language-server                   # Lua LSP server
   
