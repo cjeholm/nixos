@@ -56,7 +56,6 @@ in
     file
     gnumake
     scrot
-    ripgrep
 
     # pkgs-stable.xz
   ];

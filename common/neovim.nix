@@ -17,5 +17,8 @@ environment.systemPackages = with pkgs; [
     markdownlint-cli2     # Linting for markdown
 
     lazygit               # Terminal UI for git commands
+
+    xsel                  # For clipboard
+    ripgrep               # For telescope previews
   ];
 }
