@@ -5,7 +5,6 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    extraLuaPackages = true;
   };
 environment.systemPackages = with pkgs; [
     
