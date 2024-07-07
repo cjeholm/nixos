@@ -56,6 +56,7 @@ in
     file
     gnumake
     scrot
+    nix-your-shell
 
     # pkgs-stable.xz
   ];
