@@ -16,9 +16,13 @@ environment.systemPackages = with pkgs; [
     pylint                # Linting for Python
     markdownlint-cli2     # Linting for markdown
 
+    stylua                # Lua formatter
+    prettierd             # Prettier, as a daemon, for improved formatting speed
+
     lazygit               # Terminal UI for git commands
 
     xsel                  # For clipboard
-    ripgrep               # For telescope previews
+    ripgrep               # For Telescope previews
+    fd                    # find alternative
   ];
 }
