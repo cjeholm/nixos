@@ -17,9 +17,9 @@ environment.systemPackages = with pkgs; [
     markdownlint-cli2     # Linting for markdown
 
     stylua                # Lua formatter
-    vimPlugins.vim-prettier
-    vimPlugins.rocks-nvim
+    nodePackages.prettier
     luajitPackages.jsregexp
+    # vimPlugins.rocks-nvim   # Not found?
 
     lazygit               # Terminal UI for git commands
 
