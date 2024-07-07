@@ -13,7 +13,7 @@
     extraConfig = '' # used for less common options, intelligently combines if defined in multiple places.
     ...
     '';
-  }   
+  };
 
 environment.systemPackages = with pkgs; [
 
