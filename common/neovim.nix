@@ -5,8 +5,8 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    extraLuaPackages = true;
   };
-
 environment.systemPackages = with pkgs; [
     
     python311Packages.python-lsp-server   # Python LSP server
@@ -19,7 +19,6 @@ environment.systemPackages = with pkgs; [
     stylua                # Lua formatter
     nodePackages.prettier
     luajitPackages.jsregexp
-    # vimPlugins.rocks-nvim   # Not found?
 
     lazygit               # Terminal UI for git commands
 
