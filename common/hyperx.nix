@@ -26,7 +26,8 @@ in
       ExecStart = "${pkgs.bash}/bin/bash ${hyperx-rgb}/bin/hyperx-rgb";
       # ExecStart = "${pkgs.bash}/bin/bash hyperx-rgb";
       # Restart = "on-failure";
-      Type = "oneshot";
+      # Type = "oneshot";
+      Type = "simple";  # Using "Simple" so systemd won't wait for script to finish before proceeding
     };
   };
 }
