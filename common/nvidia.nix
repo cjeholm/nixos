@@ -3,8 +3,11 @@
 {
 
     # Enable OpenGL
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true;
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"]; # or "nvidiaLegacy470 etc.

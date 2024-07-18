@@ -35,6 +35,7 @@ in
     scrot-screen
     scrot-window
     alacritty
+    qtile
     wget
     xsel
     git
