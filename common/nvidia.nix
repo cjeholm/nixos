@@ -5,7 +5,7 @@
     # Enable OpenGL
   hardware.opengl = {
     enable = true;
-    driSupport = true;
+    # driSupport = true;  option deprecated
     driSupport32Bit = true;
   };
 
