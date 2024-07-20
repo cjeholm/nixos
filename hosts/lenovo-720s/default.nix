@@ -10,6 +10,7 @@
     # ../../common/syncthing.nix
       ../../common/common.nix
       ../../common/bluetooth.nix
+      ../../common/vpn.nix
     ];
 
   # Environment variables
