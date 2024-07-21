@@ -54,9 +54,9 @@ in
     filezilla
     file
     gnumake
-    scrot
+    scrot             # Screenshot util
     nix-your-shell
-    pamixer
+    pamixer           # Volume control for Pulse Audio
 
     # pkgs-stable.xz
   ];
