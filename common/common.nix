@@ -56,6 +56,7 @@ in
     gnumake
     scrot
     nix-your-shell
+    pamixer
 
     # pkgs-stable.xz
   ];
