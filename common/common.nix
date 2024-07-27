@@ -55,7 +55,6 @@ in
     file
     gnumake
     scrot             # Screenshot util
-    nix-your-shell
     pamixer           # Volume control for Pulse Audio
 
     # pkgs-stable.xz
