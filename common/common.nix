@@ -44,7 +44,7 @@ in
     stow
     gcc
     rofi
-    neofetch
+    fastfetch
     btop
     qt5ct
     i3lock
