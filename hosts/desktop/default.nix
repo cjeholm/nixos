@@ -37,6 +37,7 @@
 
   # Host specific packages
   environment.systemPackages = with pkgs; [
+  mdadm
   citrix_workspace_23_09_0
   libreoffice
   chirp
@@ -49,24 +50,21 @@
   rawtherapee
   obs-studio
   krita
-  blockbench
-  (blender.override { cudaSupport = true; })
+  # blockbench
+  # (blender.override { cudaSupport = true; })
   # spotify
   inkscape
   filelight
   vlc
   v4l-utils
-  google-chrome
+  # google-chrome
   ];
 
-  # Enable and configure mdadm RAID management
-  services.mdadm = {
-    enable = true;
-    extraConfig = ''
-      MAILADDR conny
-      PROGRAM /usr/bin/mail
-    ''; 
-  };
+  # Configure mdadm RAID management
+  boot.swraid.mdadmConf = ''
+      MAILADDR conny@HolmDesktop
+      PROGRAM ${pkgs.mailutils}/bin/mail
+  ''; 
 
   # Enable Wacom tablet
   services.xserver.wacom.enable = true;
