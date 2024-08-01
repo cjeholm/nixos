@@ -95,7 +95,7 @@
   users.users.conny = {
     isNormalUser = true;
     description = "Conny";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "mail" ];
     packages = with pkgs; [
       firefox
       kate

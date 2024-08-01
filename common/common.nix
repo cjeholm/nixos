@@ -24,6 +24,11 @@ in
   # Enable qtile
   services.xserver.windowManager.qtile.enable = true;
 
+  # Enable local mail server
+  services.postfix.enable = true;
+  # Be adviced! This craeates /var/spool/username as a file and not as a directory. A bug?
+  # Delete the file, make a dir, chown it. This drive me crazy.
+
   # Cursor settings - doesnt work
   # Xcursor.theme: Adwaita
   # Xcursor.size: 36
