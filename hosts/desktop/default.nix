@@ -43,7 +43,6 @@
   sdrangel
   wine64 # For Adobe DNG
   wineWowPackages.stable # For Adobe DNG. 
-  mdadm # RAID management
   steam
   backintime
   gimp
@@ -59,6 +58,15 @@
   v4l-utils
   google-chrome
   ];
+
+  # Enable and configure mdadm RAID management
+  services.mdadm = {
+    enable = true;
+    extraConfig = ''
+      MAILADDR conny
+      PROGRAM /usr/bin/mail
+    ''; 
+  };
 
   # Enable Wacom tablet
   services.xserver.wacom.enable = true;
