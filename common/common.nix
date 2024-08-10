@@ -63,6 +63,7 @@ in
     scrot             # Screenshot util
     nix-your-shell
     pamixer           # Volume control for Pulse Audio
+    fzf
 
     # pkgs-stable.xz
   ];
