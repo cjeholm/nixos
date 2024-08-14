@@ -12,7 +12,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --remember-session";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --time --remember --remember-session";
         # I can not get the default choice to work!
         # Workaround by using the --remember-session option
         # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd ${pkgs.qtile}/bin/qtile start";
