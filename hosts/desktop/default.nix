@@ -7,6 +7,7 @@
       ./configuration.nix
       ../../common/tuigreet.nix
     # ../../common/syncthing.nix
+      ../../common/smartmon.nix
       ../../common/nvidia.nix
       ../../common/common.nix
       ../../common/printer.nix

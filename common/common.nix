@@ -25,7 +25,7 @@ in
   services.xserver.windowManager.qtile.enable = true;
 
   # Enable local mail server
-  # Be adviced! This craeates /var/spool/username as a file and not as a directory. A bug?
+  # Be adviced! This craeates /var/spool/mail/username as a file and not as a directory. A bug?
   # Delete the file, make a dir, chown it. This drove me crazy.
   services.postfix.enable = true;
 
