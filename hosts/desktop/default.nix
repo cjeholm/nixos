@@ -59,6 +59,7 @@
   vlc
   v4l-utils
   # google-chrome
+  ardour
   ];
 
   # Configure mdadm RAID management
