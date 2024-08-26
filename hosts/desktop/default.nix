@@ -50,7 +50,7 @@
   gimp
   rawtherapee
   obs-studio
-  davinci-resolve
+  kdePackages.kdenlive
   krita
   # blockbench
   # (blender.override { cudaSupport = true; })
