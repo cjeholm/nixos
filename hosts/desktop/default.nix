@@ -50,17 +50,14 @@
   gimp
   rawtherapee
   obs-studio
-  kdePackages.kdenlive
+  davinci-resolve
   krita
-  # blockbench
   # (blender.override { cudaSupport = true; })
   # spotify
   inkscape
   filelight
   vlc
   v4l-utils
-  # google-chrome
-  ardour
   ];
 
   # Configure mdadm RAID management
