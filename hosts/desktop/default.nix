@@ -59,6 +59,7 @@
   vlc
   v4l-utils
   ardour
+  helm
   ];
 
   # Configure mdadm RAID management
