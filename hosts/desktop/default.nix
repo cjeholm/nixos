@@ -58,6 +58,7 @@
   filelight
   vlc
   v4l-utils
+  ardour
   ];
 
   # Configure mdadm RAID management
