@@ -60,6 +60,7 @@
   v4l-utils
   ardour
   helm
+  x42-avldrums
   ];
 
   # Configure mdadm RAID management
