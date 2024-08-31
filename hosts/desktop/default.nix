@@ -60,6 +60,7 @@
   v4l-utils
   ardour
   helm
+  qpwgraph
   ];
 
   # Configure mdadm RAID management
