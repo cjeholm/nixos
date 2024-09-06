@@ -61,6 +61,7 @@
   ardour
   helm
   qpwgraph
+  virtualbox
   ];
 
   # Configure mdadm RAID management
