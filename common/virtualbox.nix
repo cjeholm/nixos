@@ -1,8 +1,11 @@
 { config, pkgs, lib, ... }:
 
 {
+   # for host machine
    virtualisation.virtualbox.host.enable = true;
    users.extraGroups.vboxusers.members = [ "conny" ];
-   virtualisation.virtualbox.guest.enable = true;
-   virtualisation.virtualbox.guest.draganddrop = true;
+
+   # for guest machine
+#   virtualisation.virtualbox.guest.enable = true;
+#   virtualisation.virtualbox.guest.draganddrop = true;
 }
