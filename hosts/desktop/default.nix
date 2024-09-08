@@ -51,8 +51,8 @@
   gimp
   rawtherapee
   obs-studio
-  davinci-resolve
   krita
+  kdenlive
   # (blender.override { cudaSupport = true; })
   # spotify
   inkscape
