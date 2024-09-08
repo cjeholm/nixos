@@ -13,7 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  # boot.kernelParams = [ "nomodeset" ];
+  boot.kernelParams = [ "nomodeset" ];
 
   # Possible fix for screen flickering with modesetting. Didn't work but keeping it here.
   # boot.kernelParams = [ "intel_idle.max_cstate=4" ];
