@@ -61,7 +61,6 @@
   v4l-utils
   ardour
   helm
-  samplv1
   qpwgraph
   ];
 
