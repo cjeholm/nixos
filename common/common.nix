@@ -68,7 +68,7 @@ in
     nix-your-shell
     pamixer           # Volume control for Pulse Audio
     fzf
-
+    jmtpfs            # for phone Media Transfer Protocol
     # pkgs-stable.xz
   ];
 
