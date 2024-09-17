@@ -46,6 +46,7 @@ in
     alacritty
     wget
     xsel
+    xdotool
     git
     eza
     fish
