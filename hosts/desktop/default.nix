@@ -72,6 +72,26 @@
       PROGRAM ${pkgs.mailutils}/bin/mail
   ''; 
 
+  # Configure Borg backup
+  services.borgbackup.jobs.homedir = {
+    paths = "/home/conny";
+    encryption.mode = "none";
+    repo = "/mnt/Backup-HDD/home-conny";
+    compression = "auto,zstd";
+    startAt = "hourly";
+    exclude = [
+      "/home/conny/Downloads"
+      "/home/conny/Games"
+      "/home/conny/.cache"
+    ];
+    prune.keep = {
+      within = "1d"; # Keep all archives from the last day
+      daily = 7;
+      weekly = 4;
+      monthly = -1;  # Keep at least one archive for each month
+    };
+  };
+
   # Enable Wacom tablet
   services.xserver.wacom.enable = true;
 
