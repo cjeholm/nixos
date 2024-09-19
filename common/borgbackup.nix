@@ -23,6 +23,7 @@ in
       "/home/conny/Downloads"
       "/home/conny/Games"
       "/home/conny/.cache"
+      "/home/conny/.local/share/Steam"
     ];
 
     prune.keep = {
