@@ -17,7 +17,8 @@ in
     encryption.mode = "none";
     repo = "/mnt/Backup-HDD/home-conny";
     compression = "auto,zstd";
-    startAt = "hourly";
+    # startAt = "hourly";
+    startAt = "[ "00:00" "04:00" "08:00" "12:00" "16:00" "20:00" ]";
 
     exclude = [
       "/home/conny/Downloads"
