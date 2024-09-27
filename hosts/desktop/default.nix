@@ -54,6 +54,7 @@
   obs-studio
   krita
   kdenlive
+  audacity
   # (blender.override { cudaSupport = true; })
   # spotify
   inkscape
