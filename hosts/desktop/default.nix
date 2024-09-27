@@ -55,6 +55,7 @@
   krita
   kdenlive
   audacity
+  ffmpeg
   # (blender.override { cudaSupport = true; })
   # spotify
   inkscape
