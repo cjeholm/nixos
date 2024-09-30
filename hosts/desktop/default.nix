@@ -80,6 +80,12 @@
   # Steam
   programs.steam.enable = true;
 
+# Ollama LLM
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+  };
+
   # Cron - needed for Backintime
   # services.cron.enable = true;
 
