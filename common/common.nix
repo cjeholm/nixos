@@ -44,6 +44,8 @@ in
     scrot-screen
     scrot-window
     alacritty
+    dunst
+    libnotify
     wget
     xsel
     # xdotool
