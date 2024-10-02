@@ -26,6 +26,10 @@ in
       "/home/conny/.local/share/Steam"
     ];
 
+    # Notifications
+    preHook = ''${pkgs.libnotify}/bin/notify-send "BorgBackup" "Backup is starting..."'';
+    postHook = ''${pkgs.libnotify}/bin/notify-send "BorgBackup" "Backup has completed!"'';
+
     prune.keep = {
       within = "1d"; # Keep all archives from the last day
       daily = 7;
