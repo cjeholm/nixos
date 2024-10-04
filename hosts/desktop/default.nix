@@ -83,7 +83,7 @@
 
 # Ollama LLM
   services.ollama = {
-    enable = true;
+    enable = false;
     acceleration = "cuda";
   };
 
