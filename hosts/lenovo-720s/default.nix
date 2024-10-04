@@ -12,6 +12,7 @@
       ../../common/common.nix
       ../../common/bluetooth.nix
       ../../common/vpn.nix
+      ../../common/diskspace.nix
     ];
 
   # Environment variables
