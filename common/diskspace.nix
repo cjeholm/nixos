@@ -3,7 +3,8 @@
 let
 check-diskspace = pkgs.writeShellScriptBin "check-diskspace" ''
 # Set threshold for disk space (e.g., 80% use)
-THRESHOLD=80
+NORMAL=80
+CRITICAL=90
 
 # Get the partition's used disk space (in percentage)
 use_root=$(df / | grep / | /run/current-system/sw/bin/awk '{print $5}' | sed 's/%//g')
@@ -11,14 +12,28 @@ use_boot=$(df /boot | grep /boot | /run/current-system/sw/bin/awk '{print $5}' |
 use_home=$(df /home | grep /home | /run/current-system/sw/bin/awk '{print $5}' | sed 's/%//g')
 
 # Check if used space is more than the threshold
-if [ "$use_root" -gt "$THRESHOLD" ]; then
-  /run/current-system/sw/bin/notify-send "Low Disk Space" "Your root partition is running low on disk space: $use_root% used"
+if [ "$use_root" -gt "$NORMAL" ]; then
+  level="normal"
+  if [ "$use_root" -gt "$CRITICAL" ]; then
+    level="critical"
+  fi
+  /run/current-system/sw/bin/notify-send "Low Disk Space" "Your root partition is running low on disk space: $use_root% used" -u $level
 fi
-if [ "$use_boot" -gt "$THRESHOLD" ]; then
-  /run/current-system/sw/bin/notify-send "Low Disk Space" "Your boot partition is running low on disk space: $use_boot% used"
+
+if [ "$use_boot" -gt "$NORMAL" ]; then
+  level="normal"
+  if [ "$use_boot" -gt "$CRITICAL" ]; then
+    level="critical"
+  fi
+  /run/current-system/sw/bin/notify-send "Low Disk Space" "Your boot partition is running low on disk space: $use_boot% used" -u $level
 fi
-if [ "$use_home" -gt "$THRESHOLD" ]; then
-  /run/current-system/sw/bin/notify-send "Low Disk Space" "Your home partition is running low on disk space: $use_home% used"
+
+if [ "$use_home" -gt "$NORMAL" ]; then
+  level="normal"
+  if [ "$use_home" -gt "$CRITICAL" ]; then
+    level="critical"
+  fi
+  /run/current-system/sw/bin/notify-send "Low Disk Space" "Your home partition is running low on disk space: $use_home% used" -u $level
 fi
 '';
 
