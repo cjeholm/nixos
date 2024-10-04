@@ -17,7 +17,7 @@ in
     encryption.mode = "none";
     repo = "/mnt/Backup-HDD/home-conny";
     compression = "auto,zstd";
-    startAt = "daily";
+    startAt = "hourly";
 
     exclude = [
       "/home/conny/Downloads"
@@ -28,8 +28,10 @@ in
 
     # Notifications
     # Todo: These needs to be run as the user. How do I do that?
-    # preHook = ''${pkgs.libnotify}/bin/notify-send "BorgBackup" "Backup is starting..."'';
-    # postHook = ''${pkgs.libnotify}/bin/notify-send "BorgBackup" "Backup has completed!"'';
+    #       runuser -l yourusername -c /path/to/your/script.sh
+    #
+    # preHook = ''/run/current-system/sw/bin/runuser -l conny -c ${pkgs.libnotify}/bin/notify-send "BorgBackup" "Backup is starting..."'';
+    # postHook = ''/run/current-system/sw/bin/runuser -l conny -c ${pkgs.libnotify}/bin/notify-send "BorgBackup" "Backup has completed!"'';
 
     prune.keep = {
       within = "1d"; # Keep all archives from the last day

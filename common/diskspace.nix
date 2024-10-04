@@ -61,7 +61,7 @@ in
     wantedBy = [ "timers.target" ];
     timerConfig = {
       OnCalendar = "*:0/5:0"; # This means every 5 minutes
-      Persistent = true;      # Ensures the script runs even after the system was off during a scheduled run
+      Persistent = false;      # Ensures the script runs even after the system was off during a scheduled run
     };
   };
 }
