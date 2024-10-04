@@ -27,8 +27,9 @@ in
     ];
 
     # Notifications
-    preHook = ''${pkgs.libnotify}/bin/notify-send "BorgBackup" "Backup is starting..."'';
-    postHook = ''${pkgs.libnotify}/bin/notify-send "BorgBackup" "Backup has completed!"'';
+    # Todo: These needs to be run as the user. How do I do that?
+    # preHook = ''${pkgs.libnotify}/bin/notify-send "BorgBackup" "Backup is starting..."'';
+    # postHook = ''${pkgs.libnotify}/bin/notify-send "BorgBackup" "Backup has completed!"'';
 
     prune.keep = {
       within = "1d"; # Keep all archives from the last day
