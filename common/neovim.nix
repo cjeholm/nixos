@@ -25,7 +25,7 @@ environment.systemPackages = with pkgs; [
     nodePackages.prettier
     luajitPackages.jsregexp
 
-    lazygit               # Terminal UI for git commands
+    # lazygit               # Terminal UI for git commands
 
     xsel                  # For clipboard
     ripgrep               # For Telescope previews
