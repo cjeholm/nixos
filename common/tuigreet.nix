@@ -10,6 +10,8 @@
 
   services.greetd = {
     enable = true;
+    # The virtual console (tty) that greetd should use. This option also disables getty on that tty.
+    vt = 2;
     settings = {
       default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --time --remember --remember-session";
