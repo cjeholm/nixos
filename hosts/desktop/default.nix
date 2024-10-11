@@ -58,7 +58,7 @@
   audacity
   ffmpeg
   # (blender.override { cudaSupport = true; })
-  # spotify
+  spotify
   inkscape
   filelight
   vlc
