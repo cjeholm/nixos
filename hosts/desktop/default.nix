@@ -69,6 +69,11 @@
   qpwgraph
   ];
 
+  # Fonts
+  fonts.packages = with pkgs; [
+    google-fonts
+  ];
+
   # Configure mdadm RAID management
   boot.swraid.mdadmConf = ''
       MAILADDR conny@HolmDesktop
