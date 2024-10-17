@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-stable, ... }:
 
 let
   kbd-starlight = import ../scripts/kbd-starlight.nix { inherit pkgs; };
@@ -11,7 +11,7 @@ in
 
   environment.systemPackages = with pkgs; [
     openrazer-daemon # Control mouse and keyboard RGB
-    polychromatic
+    pkgs-stable.polychromatic
 
     kbd-starlight
     kbd-static

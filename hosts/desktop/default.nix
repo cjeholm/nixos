@@ -44,13 +44,13 @@
   mdadm
   # citrix_workspace_23_09_0
   pkgs-stable.citrix_workspace_23_09_0
+  pkgs-stable.python312Packages.pyqt6   # for rebuild to pass
   libreoffice
   chirp
-  sdrangel
+  pkgs-stable.sdrangel
   wine64 # For Adobe DNG
   wineWowPackages.stable # For Adobe DNG. 
   steam
-  # backintime
   gimp
   rawtherapee
   obs-studio
@@ -65,7 +65,7 @@
   vlc
   v4l-utils
   ardour
-  helm
+  pkgs-stable.helm
   sfizz
   qpwgraph
   ];
