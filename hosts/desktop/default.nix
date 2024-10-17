@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-stable, ... }:
 
 {
 
@@ -42,7 +42,8 @@
   # Host specific packages
   environment.systemPackages = with pkgs; [
   mdadm
-  citrix_workspace_23_09_0
+  # citrix_workspace_23_09_0
+  pkgs-stable.citrix_workspace_23_09_0
   libreoffice
   chirp
   sdrangel
