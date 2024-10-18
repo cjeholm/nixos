@@ -54,6 +54,7 @@
   gimp
   rawtherapee
   obs-studio
+  cameractrls-gtk4
   krita
   kdenlive
   audacity
