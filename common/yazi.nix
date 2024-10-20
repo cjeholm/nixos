@@ -17,6 +17,7 @@
     zoxide
     imagemagick
     xsel
+    ueberzugpp
 
     mediainfo
     exiftool
