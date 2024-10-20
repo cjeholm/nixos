@@ -21,6 +21,7 @@
     mediainfo
     exiftool
     mpv
+    feh
   ];
 
   # Yazi terminal file manager
