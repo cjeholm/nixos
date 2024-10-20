@@ -45,6 +45,7 @@ in
     scrot-screen
     scrot-window
     alacritty
+    kitty
     dunst
     libnotify
     wget
@@ -74,6 +75,9 @@ in
     jmtpfs            # for phone Media Transfer Protocol
     # pkgs-stable.xz
   ];
+
+  # Yazi terminal file manager
+  programs.yazi.enable = true;
 
   # Fonts
   fonts.packages = with pkgs; [
