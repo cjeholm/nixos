@@ -12,7 +12,7 @@
     viu
     poppler
     fd
-    rg
+    ripgrep
     fzf
     zoxide
     imagemagick
