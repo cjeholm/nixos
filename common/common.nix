@@ -49,6 +49,7 @@ in
     viu
     mediainfo
     exiftool
+    mpv
     dunst
     libnotify
     wget
