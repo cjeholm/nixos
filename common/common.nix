@@ -47,6 +47,8 @@ in
     alacritty
     kitty
     viu
+    mediainfo
+    exiftool
     dunst
     libnotify
     wget
