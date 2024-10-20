@@ -28,6 +28,13 @@
   # Yazi terminal file manager
   programs.yazi.enable = true;
 
+  programs.yazi.settings.theme = {
+    status = {
+      separator_open  = "";
+      separator_close = "";
+    };
+  };
+
   # Fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "IBMPlexMono" ]; })
