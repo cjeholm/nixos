@@ -13,6 +13,7 @@
       ../../common/bluetooth.nix
       ../../common/vpn.nix
       ../../common/diskspace.nix
+      ../../common/yazi.nix
     ];
 
   # Environment variables

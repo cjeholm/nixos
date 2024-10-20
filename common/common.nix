@@ -40,21 +40,15 @@ in
 # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    mc
     mailutils
     scrot-screen
     scrot-window
     alacritty
     kitty
-    viu
-    mediainfo
-    exiftool
-    mpv
     dunst
     libnotify
     wget
     xsel
-    # xdotool
     git
     eza
     fish
@@ -79,9 +73,6 @@ in
     jmtpfs            # for phone Media Transfer Protocol
     # pkgs-stable.xz
   ];
-
-  # Yazi terminal file manager
-  programs.yazi.enable = true;
 
   # Fonts
   fonts.packages = with pkgs; [
