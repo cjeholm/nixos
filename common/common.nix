@@ -46,6 +46,7 @@ in
     scrot-window
     alacritty
     kitty
+    viu
     dunst
     libnotify
     wget
