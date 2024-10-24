@@ -15,6 +15,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelParams = ["nomodeset"];
+
+  # Possible fix for screen flickering with modesetting. Didn't work but keeping it here.
   # boot.kernelParams = [ "i915.enable_psr=0" "intel_idle.max_cstate=2" ];
 
   # Possible fix for screen flickering with modesetting. Didn't work but keeping it here.
