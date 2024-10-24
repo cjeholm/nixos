@@ -1,13 +1,10 @@
-{ config, pkgs, ... }:
-
 {
-
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
-
-  bluetuith   # Bluetooth TUI
-
+    bluetuith # Bluetooth TUI
   ];
-
 
   # Bluetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth
