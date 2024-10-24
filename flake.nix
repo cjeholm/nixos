@@ -43,6 +43,7 @@
         ];
         specialArgs = {
           inherit pkgs-stable;
+          inherit inputs;
         };
       };
  
