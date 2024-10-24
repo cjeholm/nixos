@@ -8,7 +8,7 @@
     # home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, nixpkgs-stable, ... }: 
+  outputs = inputs@{ nixpkgs, nixpkgs-stable, ... }: 
 
     let
       lib = nixpkgs.lib;
