@@ -33,6 +33,7 @@
 
     alejandra # Nix code formatter. Fast and reliable.
     # nixpkgs-fmt         # Current official style, required for Nixpkgs contributions
+    black # Python code formatter
   ];
 
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
