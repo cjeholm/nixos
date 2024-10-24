@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   programs.neovim = {
@@ -33,4 +34,6 @@
     alejandra # Nix code formatter. Fast and reliable.
     # nixpkgs-fmt         # Current official style, required for Nixpkgs contributions
   ];
+
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 }
