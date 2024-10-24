@@ -1,19 +1,20 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [ "nomodeset" ];
+  boot.kernelParams = ["nomodeset"];
   # boot.kernelParams = [ "i915.enable_psr=0" "intel_idle.max_cstate=2" ];
 
   # Possible fix for screen flickering with modesetting. Didn't work but keeping it here.
@@ -28,9 +29,9 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  
+
   # Enable the Flakes feature and the accompanying new nix command-line tool
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Set your time zone.
   time.timeZone = "Europe/Stockholm";
@@ -49,7 +50,6 @@
     LC_TELEPHONE = "sv_SE.UTF-8";
     LC_TIME = "sv_SE.UTF-8";
   };
-
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -96,11 +96,11 @@
   users.users.conny = {
     isNormalUser = true;
     description = "Conny";
-    extraGroups = [ "networkmanager" "wheel" "mail" ];
+    extraGroups = ["networkmanager" "wheel" "mail"];
     packages = with pkgs; [
       firefox
       kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -110,10 +110,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
- ];
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  ];
 
- # Some programs need SUID wrappers, can be configured further or are
+  # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
@@ -139,5 +139,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }

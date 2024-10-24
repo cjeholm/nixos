@@ -1,33 +1,32 @@
-{ config, pkgs, lib, ... }:
-
-let
-hyperx-rgb = pkgs.writeShellScriptBin "hyperx-rgb" ''
-  sleep 3s
-  ${pkgs.openrgb}/bin/openrgb --device "HyperX Quadcast S" --color 00FFFF
-'';
-in 
-
 {
-
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
+  hyperx-rgb = pkgs.writeShellScriptBin "hyperx-rgb" ''
+    sleep 3s
+    ${pkgs.openrgb}/bin/openrgb --device "HyperX Quadcast S" --color 00FFFF
+  '';
+in {
   environment.systemPackages = with pkgs; [
     hyperx-rgb
   ];
 
-
-# Enable OpenRGB
+  # Enable OpenRGB
   services.hardware.openrgb.enable = true;
 
-# Enable the script to run at startup.
+  # Enable the script to run at startup.
 
   systemd.services.hyperx-rgb = {
     description = "HyperX Quadcast S RGB";
-    wantedBy = [ "multi-user.target" ];
+    wantedBy = ["multi-user.target"];
     serviceConfig = {
       ExecStart = "${pkgs.bash}/bin/bash ${hyperx-rgb}/bin/hyperx-rgb";
       # ExecStart = "${pkgs.bash}/bin/bash hyperx-rgb";
       # Restart = "on-failure";
       # Type = "oneshot";
-      Type = "simple";  # Using "Simple" so systemd won't wait for script to finish before proceeding
+      Type = "simple"; # Using "Simple" so systemd won't wait for script to finish before proceeding
     };
   };
 }

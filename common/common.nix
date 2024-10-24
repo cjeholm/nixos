@@ -1,17 +1,15 @@
-{ config, pkgs, pkgs-stable, ... }:
-
-let
-    scrot-screen = import ../scripts/scrot-screen.nix { inherit pkgs; };
-    scrot-window = import ../scripts/scrot-window.nix { inherit pkgs; };
-in 
-
 {
-
-  imports =
-    [
-      ./neovim.nix  # Neovim and my LSP and linting stuff.
-    ];
-
+  config,
+  pkgs,
+  pkgs-stable,
+  ...
+}: let
+  scrot-screen = import ../scripts/scrot-screen.nix {inherit pkgs;};
+  scrot-window = import ../scripts/scrot-window.nix {inherit pkgs;};
+in {
+  imports = [
+    ./neovim.nix # Neovim and my LSP and linting stuff.
+  ];
 
   # Environment variables
   environment.variables = {
@@ -37,7 +35,7 @@ in
   # Xcursor.size: 36
   # xserver.cursor.size = 40;
 
-# List packages installed in system profile. To search, run:
+  # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     mailutils
@@ -66,17 +64,17 @@ in
     filezilla
     file
     gnumake
-    scrot             # Screenshot util
+    scrot # Screenshot util
     nix-your-shell
-    pamixer           # Volume control for Pulse Audio
+    pamixer # Volume control for Pulse Audio
     fzf
-    jmtpfs            # for phone Media Transfer Protocol
+    jmtpfs # for phone Media Transfer Protocol
     # pkgs-stable.xz
   ];
 
   # Fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "IBMPlexMono" ]; })
+    (nerdfonts.override {fonts = ["IBMPlexMono"];})
   ];
 
   # Set default shell
@@ -92,5 +90,4 @@ in
     #  export NIX_LD=$(nix eval --impure --raw --expr 'let pkgs = import <nixpkgs> {}; NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker"; in NIX_LD')
     #'';
   };
-
 }

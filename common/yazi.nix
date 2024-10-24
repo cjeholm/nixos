@@ -1,11 +1,11 @@
-{ config, pkgs, ... }:
-
-# Yazi file manager and a bunch of stuff for additional features
-
 {
-
+  config,
+  pkgs,
+  ...
+}:
+# Yazi file manager and a bunch of stuff for additional features
+{
   environment.systemPackages = with pkgs; [
-
     ffmpegthumbnailer
     p7zip
     jq
@@ -30,14 +30,13 @@
 
   programs.yazi.settings.theme = {
     status = {
-      separator_open  = "";
+      separator_open = "";
       separator_close = "";
     };
   };
 
   # Fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "IBMPlexMono" ]; })
+    (nerdfonts.override {fonts = ["IBMPlexMono"];})
   ];
-
 }

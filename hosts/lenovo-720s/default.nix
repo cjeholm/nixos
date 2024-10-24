@@ -1,20 +1,22 @@
-{ config, pkgs, pkgs-stable, ... }:
-
 {
-
-  imports =
-    [ # Import common settings
-      ./configuration.nix
-      ../../common/tuigreet.nix
-      ../../common/i915.nix
+  config,
+  pkgs,
+  pkgs-stable,
+  ...
+}: {
+  imports = [
+    # Import common settings
+    ./configuration.nix
+    ../../common/tuigreet.nix
+    ../../common/i915.nix
     # ../../common/syncthing.nix
-      ../../common/smartmon.nix
-      ../../common/common.nix
-      ../../common/bluetooth.nix
-      ../../common/vpn.nix
-      ../../common/diskspace.nix
-      ../../common/yazi.nix
-    ];
+    ../../common/smartmon.nix
+    ../../common/common.nix
+    ../../common/bluetooth.nix
+    ../../common/vpn.nix
+    ../../common/diskspace.nix
+    ../../common/yazi.nix
+  ];
 
   # Environment variables
   environment.variables = {
@@ -32,8 +34,7 @@
     chirp
     pkgs-stable.sdrangel
     wine64 # For Adobe DNG
-    wineWowPackages.stable # For Adobe DNG. 
+    wineWowPackages.stable # For Adobe DNG.
     krita
   ];
-
 }

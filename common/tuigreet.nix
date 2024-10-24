@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     greetd.greetd
     greetd.tuigreet
@@ -22,5 +24,4 @@
       };
     };
   };
-
 }

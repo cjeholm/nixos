@@ -1,11 +1,11 @@
-{ config, pkgs, ... }:
-
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.printing.drivers = [ 
-
+  services.printing.drivers = [
     # pkgs.gutenprint # — Drivers for many different printers from many different vendors.
     # pkgs.gutenprintBin # — Additional, binary-only drivers for some printers.
     # pkgs.hplip # — Drivers for HP printers.
@@ -17,7 +17,5 @@
     # pkgs.brgenml1lpr #  — Generic drivers for more Brother printers [1]
     # pkgs.brgenml1cupswrapper  # — Generic drivers for more Brother printers [1]
     # pkgs.cnijfilter2 # — Drivers for some Canon Pixma devices (Proprietary driver)
-
-  ]; 
-
+  ];
 }

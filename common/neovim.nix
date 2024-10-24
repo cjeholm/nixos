@@ -35,5 +35,5 @@
     # nixpkgs-fmt         # Current official style, required for Nixpkgs contributions
   ];
 
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 }

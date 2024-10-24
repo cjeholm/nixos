@@ -8,23 +8,25 @@
     # home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, nixpkgs-stable, ... }: 
+  outputs = inputs @ {
+    nixpkgs,
+    nixpkgs-stable,
+    ...
+  }: let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    # pkgs = nixpkgs.legacyPackages.${system};
+    # pkgs-stable = nixpkgs-stable.legacyPackages.${system};
 
-    let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      # pkgs = nixpkgs.legacyPackages.${system};
-      # pkgs-stable = nixpkgs-stable.legacyPackages.${system};
-
-      commonArgs = { inherit system; config.allowUnfree = true; };
-      pkgs = import nixpkgs commonArgs;
-      pkgs-stable = import nixpkgs-stable commonArgs;
-
-    in {
-
+    commonArgs = {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    pkgs = import nixpkgs commonArgs;
+    pkgs-stable = import nixpkgs-stable commonArgs;
+  in {
     nixosConfigurations = {
-
-# Configurrations by hostname or '--flake .#name'
+      # Configurrations by hostname or '--flake .#name'
 
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -46,7 +48,7 @@
           inherit inputs;
         };
       };
- 
+
       HolmLaptop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
@@ -67,8 +69,6 @@
           inherit pkgs-stable;
         };
       };
- 
     };
-
   };
 }
