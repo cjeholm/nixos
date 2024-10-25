@@ -18,7 +18,8 @@
     python311Packages.python-lsp-server # Python LSP server
     lua-language-server # Lua LSP server
     clang-tools # C++ LSP server
-    nixd # nix LSP
+    nixd # nix LSP server
+    marksman # Markdown LSP server
 
     pylint # Linting for Python
     markdownlint-cli2 # Linting for markdown
