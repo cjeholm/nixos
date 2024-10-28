@@ -57,6 +57,7 @@
   services.xserver.xkb = {
     layout = "se";
     variant = "";
+    options = "ctrl:nocaps";
   };
 
   # Configure console keymap
