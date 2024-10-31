@@ -56,7 +56,7 @@ in {
     rofi
     fastfetch
     btop
-    qt5ct
+    libsForQt5.qt5ct
     i3lock
     tldr
     bat
