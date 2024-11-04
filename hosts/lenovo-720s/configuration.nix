@@ -66,9 +66,10 @@
   services.xserver.windowManager.qtile.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
-    xkb.layout = "se";
-    xkb.variant = "";
+  services.xserver.xkb = {
+    layout = "se";
+    variant = "";
+    options = "ctrl:nocaps";
   };
 
   # Configure console keymap
