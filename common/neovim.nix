@@ -20,6 +20,7 @@
     clang-tools # C++ LSP server
     nixd # nix LSP server
     marksman # Markdown LSP server
+    vscode-langservers-extracted # HTML/CSS/JSON/ESLint language servers extracted from vscode
 
     pylint # Linting for Python
     markdownlint-cli2 # Linting for markdown
