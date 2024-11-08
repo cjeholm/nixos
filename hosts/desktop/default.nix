@@ -22,6 +22,7 @@
     ../../common/virtualbox.nix
     ../../common/diskspace.nix
     ../../common/yazi.nix
+    ../../common/rtl-sdr.nix
   ];
 
   # Set hdd spindown timer. The value of 0 disables spindown, the values from 1 to 240 specify multiples of 5 seconds and values from 241 to 251 specify multiples of 30 minutes.
@@ -51,7 +52,6 @@
     pkgs-stable.python312Packages.pyqt6 # for rebuild to pass
     libreoffice
     chirp
-    pkgs-stable.sdrangel
     wine64 # For Adobe DNG
     wineWowPackages.stable # For Adobe DNG.
     steam
