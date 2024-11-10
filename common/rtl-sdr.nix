@@ -1,10 +1,10 @@
 {
-  config,
   pkgs,
   pkgs-stable,
   ...
 }: {
   environment.systemPackages = with pkgs; [
+    # pkgs-stable.sdrangel
     pkgs-stable.sdrangel
   ];
 
