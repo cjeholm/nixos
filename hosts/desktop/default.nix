@@ -70,7 +70,8 @@
     vlc
     v4l-utils
     ardour
-    pkgs-stable.helm
+    helm
+    surge-XT
     sfizz
     qpwgraph
   ];
