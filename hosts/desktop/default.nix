@@ -72,6 +72,7 @@
     ardour
     helm
     surge-XT
+    dragonfly-reverb
     sfizz
     qpwgraph
   ];
