@@ -22,6 +22,7 @@
     ../../common/virtualbox.nix
     ../../common/diskspace.nix
     ../../common/yazi.nix
+    ../../common/ardour.nix
     ../../common/rtl-sdr.nix
   ];
 
@@ -69,11 +70,6 @@
     filelight
     vlc
     v4l-utils
-    ardour
-    helm
-    surge-XT
-    dragonfly-reverb
-    sfizz
     qpwgraph
   ];
 
