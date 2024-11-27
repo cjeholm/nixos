@@ -24,6 +24,7 @@
     ../../common/yazi.nix
     ../../common/ardour.nix
     ../../common/rtl-sdr.nix
+    ../../common/wacom.nix
   ];
 
   # Set hdd spindown timer. The value of 0 disables spindown, the values from 1 to 240 specify multiples of 5 seconds and values from 241 to 251 specify multiples of 30 minutes.
@@ -60,6 +61,7 @@
     rawtherapee
     obs-studio
     cameractrls-gtk4
+    gromit-mpx
     krita
     kdenlive
     audacity
@@ -83,9 +85,6 @@
     MAILADDR conny@HolmDesktop
     PROGRAM ${pkgs.mailutils}/bin/mail
   '';
-
-  # Enable Wacom tablet
-  services.xserver.wacom.enable = true;
 
   # Steam
   programs.steam.enable = true;
