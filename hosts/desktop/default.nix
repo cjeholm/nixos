@@ -64,6 +64,7 @@
     gromit-mpx
     krita
     kdenlive
+    davinci-resolve
     audacity
     ffmpeg
     # (blender.override { cudaSupport = true; })
