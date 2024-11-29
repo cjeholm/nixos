@@ -63,8 +63,7 @@
     cameractrls-gtk4
     gromit-mpx
     krita
-    kdenlive
-    davinci-resolve
+    kdePackages.kdenlive
     audacity
     ffmpeg
     # (blender.override { cudaSupport = true; })
