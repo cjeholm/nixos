@@ -36,7 +36,5 @@
   };
 
   # Fonts
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["IBMPlexMono"];})
-  ];
+  fonts.packages = [ pkgs.nerd-fonts.blex-mono];
 }
