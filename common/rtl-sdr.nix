@@ -1,17 +1,14 @@
 {
-  pkgs,
   pkgs-stable,
   ...
 }: {
-  environment.systemPackages = with pkgs; [
-    # pkgs-stable.sdrangel
+  environment.systemPackages = [
     pkgs-stable.sdrangel
   ];
 
   # Blacklist the DVB driver
+  # Shows as DVT in dmesg and we don't want that since it hogs the device
   boot.blacklistedKernelModules = ["dvb_usb_rtl28xxu"];
-
-  # services.udev.packages = [pkgs.rtl-sdr];
 
   # udev rule for usb instrument permission
   # get idVendor and idProduct with 'sudo dmesg'
