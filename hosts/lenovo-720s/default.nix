@@ -10,6 +10,7 @@
     ../../common/tuigreet.nix
     ../../common/i915.nix
     # ../../common/syncthing.nix
+    ../../common/pipewire.nix
     ../../common/smartmon.nix
     ../../common/common.nix
     ../../common/bluetooth.nix

@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }:
@@ -34,7 +33,4 @@
       separator_close = "";
     };
   };
-
-  # Fonts
-  fonts.packages = [ pkgs.nerd-fonts.blex-mono];
 }
