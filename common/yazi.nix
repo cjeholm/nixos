@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-pinned,
   ...
 }:
 # Yazi file manager and a bunch of stuff for additional features
@@ -27,6 +28,7 @@
 
   # Yazi terminal file manager
   programs.yazi.enable = true;
+  programs.yazi.package = pkgs-pinned.yazi;
 
   programs.yazi.settings.theme = {
     status = {

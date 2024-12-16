@@ -3,27 +3,24 @@
 
   inputs = {
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-pinned.url = "github:nixos/nixpkgs/9cba8883bbb694f4cc3c517abfb5c0b11558943b";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # home-manager.url = "github:nix-community/home-manager/release-23.11";
-    # home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs @ {
     nixpkgs,
     nixpkgs-stable,
+    nixpkgs-pinned,
     ...
   }: let
-    lib = nixpkgs.lib;
     system = "x86_64-linux";
-    # pkgs = nixpkgs.legacyPackages.${system};
-    # pkgs-stable = nixpkgs-stable.legacyPackages.${system};
 
     commonArgs = {
       inherit system;
       config.allowUnfree = true;
     };
-    pkgs = import nixpkgs commonArgs;
     pkgs-stable = import nixpkgs-stable commonArgs;
+    pkgs-pinned = import nixpkgs-pinned commonArgs;
   in {
     nixosConfigurations = {
       # Configurrations by hostname or '--flake .#name'
@@ -46,6 +43,7 @@
         ];
         specialArgs = {
           inherit pkgs-stable;
+          inherit pkgs-pinned;
           inherit inputs;
         };
       };
