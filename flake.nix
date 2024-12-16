@@ -7,6 +7,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
+  # Tool for finding specific commits on https://www.nixhub.io/
+
   outputs = inputs @ {
     nixpkgs,
     nixpkgs-stable,
