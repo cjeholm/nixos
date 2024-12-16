@@ -2,7 +2,7 @@
   config, # config is here for the nvidia module
   pkgs,
   pkgs-stable,
-  pkgs-pinned,
+  # pkgs-pinned,
   inputs,
   ...
 }: {
@@ -47,6 +47,15 @@
       '';
     }
   ];
+
+  # Overlays
+  #  nixpkgs.overlays = [
+  # Overlay: Use `self` and `super` to express
+  # the inheritance relationship
+  #   (self: super: {
+  #     yazi = pkgs-pinned.yazi;
+  #   })
+  # ];
 
   # Host specific packages
   environment.systemPackages = with pkgs; [
