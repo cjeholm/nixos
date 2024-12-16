@@ -1,5 +1,5 @@
 {
-  config,
+  config, # config is here for the nvidia module
   pkgs,
   pkgs-stable,
   pkgs-pinned,
