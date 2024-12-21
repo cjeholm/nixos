@@ -84,6 +84,7 @@
     vlc
     v4l-utils
     qpwgraph
+    inputs.zen-browser.packages."${system}".default
   ];
 
   # Fonts

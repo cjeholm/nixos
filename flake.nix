@@ -5,6 +5,8 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     # nixpkgs-pinned.url = "github:nixos/nixpkgs/9cba8883bbb694f4cc3c517abfb5c0b11558943b";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   # Tool for finding specific commits on https://www.nixhub.io/
