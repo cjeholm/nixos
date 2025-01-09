@@ -61,7 +61,7 @@
   environment.systemPackages = with pkgs; [
     mdadm
     # citrix_workspace_23_09_0
-    pkgs-stable.citrix_workspace_23_09_0
+    pkgs-stable.citrix_workspace_23_11_0
     pkgs-stable.python312Packages.pyqt6 # for rebuild to pass
     libreoffice
     chirp
