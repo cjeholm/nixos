@@ -50,6 +50,7 @@ in {
     xsel
     git
     eza
+    duf
     fish
     starship
     stow
