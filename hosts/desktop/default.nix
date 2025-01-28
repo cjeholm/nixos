@@ -106,6 +106,10 @@
     enable = true;
     acceleration = "cuda";
   };
+  services.open-webui = {
+    enable = true;
+    port = 8080;
+  };
 
   # Cron - needed for Backintime
   # services.cron.enable = true;
