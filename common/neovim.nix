@@ -15,7 +15,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    python311Packages.python-lsp-server # Python LSP server
+    python313Packages.python-lsp-server # Python LSP server
     lua-language-server # Lua LSP server
     clang-tools # C++ LSP server
     nixd # nix LSP server
