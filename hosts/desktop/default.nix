@@ -104,11 +104,11 @@
 
   # Ollama LLM
   services.ollama = {
-    enable = true;
+    enable = false;
     acceleration = "cuda";
   };
   services.open-webui = {
-    enable = true;
+    enable = false;
     port = 8080;
   };
 
