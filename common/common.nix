@@ -14,6 +14,7 @@ in {
   # Environment variables
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
+    XDG_CURRENT_DESKTOP = "KDE";
   };
 
   # Enable non-free nixpkgs. This is for steam-run.
