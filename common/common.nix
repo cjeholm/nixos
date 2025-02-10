@@ -14,7 +14,7 @@ in {
   # Environment variables
   environment.variables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
-    XDG_CURRENT_DESKTOP = "KDE";
+    # XDG_CURRENT_DESKTOP = "KDE"; # enabling this breaks xdg-open
   };
 
   # Enable non-free nixpkgs. This is for steam-run.
