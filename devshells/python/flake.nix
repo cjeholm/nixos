@@ -1,15 +1,17 @@
 # Nix flake based developer shell
 # Run with: nix develop
+# From Vimjoyer's video "The Best Way To Use Python On NixOS"
+# https://www.youtube.com/watch?v=6fftiTJ2vuQ
 {
-  description = "Dev shell for Python";
+  description = "Flake based dev shell for Python";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
   outputs = {
-    self,
     nixpkgs,
+    ...
   }: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -17,8 +19,18 @@
     devShells.${system}.default =
       pkgs.mkShell
       {
-        buildInputs = [
-          pkgs.python312Packages.requests
+        packages = [
+          (pkgs.python3.withPackages (p:
+            with p; [
+              numpy
+              requests
+              pandas
+            ]))
+        ];
+
+        env.LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+          pkgs.stdenv.cc.cc.lib
+          pkgs.libz
         ];
 
         shellHook = ''
