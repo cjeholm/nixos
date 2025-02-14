@@ -30,15 +30,14 @@
   fileSystems."/home" = {
     device = "/dev/disk/by-uuid/adafcc7d-aae5-4918-b129-3ff2db46ee76";
     fsType = "ext4";
+    options = ["nofail"];
   };
 
-  fileSystems."/mnt/Backup-HDD" =
-    # { device = "/dev/disk/by-uuid/d8c6e398-6ef1-45ea-af4f-8371502a34c1";
-    {
-      device = "/dev/disk/by-uuid/a32202b8-2401-405d-9ac8-e1c787b029f8";
-      # a32202b8-2401-405d-9ac8-e1c787b029f8
-      fsType = "ext4";
-    };
+  fileSystems."/mnt/Backup-HDD" = {
+    device = "/dev/disk/by-uuid/a32202b8-2401-405d-9ac8-e1c787b029f8";
+    fsType = "ext4";
+    options = ["nofail"];
+  };
   swapDevices = [];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
