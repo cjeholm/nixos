@@ -80,7 +80,6 @@
     # (blender.override { cudaSupport = true; })
     spotify
     inkscape
-    filelight
     vlc
     v4l-utils
     qpwgraph
