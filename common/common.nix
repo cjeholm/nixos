@@ -76,7 +76,18 @@ in {
   ];
 
   # Fonts
-  fonts.packages = [ pkgs.nerd-fonts.blex-mono];
+  # Find font names with > fc-match BlexMono -s | grep Blex
+  fonts = {
+    packages = [pkgs.nerd-fonts.blex-mono];
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        serif = ["BlexMono Nerd Font"];
+        sansSerif = ["BlexMono Nerd Font"];
+        monospace = ["BlexMono Nerd Font"];
+      };
+    };
+  };
 
   # Set default shell
   # users.defaultUserShell = pkgs.zsh;
