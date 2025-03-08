@@ -82,8 +82,8 @@ in {
     fontconfig = {
       enable = true;
       defaultFonts = {
-        serif = ["BlexMono Nerd Font"];
-        sansSerif = ["BlexMono Nerd Font"];
+        # serif = ["BlexMono Nerd Font"];
+        # sansSerif = ["BlexMono Nerd Font"];
         monospace = ["BlexMono Nerd Font"];
       };
     };
