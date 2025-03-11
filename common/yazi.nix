@@ -5,6 +5,7 @@
 # Yazi file manager and a bunch of stuff for additional features
 {
   environment.systemPackages = with pkgs; [
+    yazi
     ffmpegthumbnailer
     p7zip
     jq
@@ -25,12 +26,12 @@
   ];
 
   # Yazi terminal file manager
-  programs.yazi.enable = true;
+  # programs.yazi.enable = true;
 
-  programs.yazi.settings.theme = {
-    status = {
-      separator_open = "";
-      separator_close = "";
-    };
-  };
+  # programs.yazi.settings.theme = {
+  #   status = {
+  #     separator_open = "";
+  #     separator_close = "";
+  #   };
+  # };
 }
