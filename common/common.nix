@@ -73,7 +73,7 @@ in {
     fzf
     jmtpfs # for phone Media Transfer Protocol
     # pkgs-stable.xz
-    okular
+    kdePackages.okular
   ];
 
   # Fonts
