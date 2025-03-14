@@ -74,6 +74,7 @@ in {
     jmtpfs # for phone Media Transfer Protocol
     # pkgs-stable.xz
     kdePackages.okular
+    zip
   ];
 
   # Fonts
