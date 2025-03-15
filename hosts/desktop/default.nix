@@ -60,6 +60,7 @@
   # Host specific packages
   environment.systemPackages = with pkgs; [
     mdadm
+    samsung-unified-linux-driver
     # citrix_workspace_23_09_0
     pkgs-stable.citrix_workspace_23_11_0
     nvtopPackages.nvidia
