@@ -3,6 +3,9 @@
   pkgs,
   ...
 }: {
+
+  # Manage CUPS from http://localhost:631/
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
   services.printing.drivers = [

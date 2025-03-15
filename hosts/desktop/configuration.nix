@@ -52,6 +52,7 @@
   # Enable the KDE Plasma Desktop Environment.
   #  services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = false;
+  services.xserver.desktopManager.plasma6.enable = false;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -62,9 +63,6 @@
 
   # Configure console keymap
   console.keyMap = "sv-latin1";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
