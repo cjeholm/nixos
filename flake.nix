@@ -52,15 +52,6 @@
         };
       };
 
-      nixos-vm = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./hosts/nixos-vm
-        ];
-        specialArgs = {
-          inherit pkgs-stable;
-        };
-      };
     };
   };
 }
