@@ -7,6 +7,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    # zen-browser.inputs.nixpkgs.follows = "nixpkgs"; # For zen to use the same dependency versions as nixpkgs. Leaner, but can break zen if it's updated separately.
   };
 
   # Tool for finding specific commits on https://www.nixhub.io/
