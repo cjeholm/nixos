@@ -92,6 +92,10 @@
     google-fonts
   ];
 
+  # Coral TPU
+  hardware.coral.usb.enable = true;
+  hardware.coral.pcie.enable = false;
+
   # Configure mdadm RAID management
   boot.swraid.mdadmConf = ''
     MAILADDR conny@HolmDesktop
