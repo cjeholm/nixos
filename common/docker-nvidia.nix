@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     docker-compose
     nvidia-docker
+    # libedgetpu
   ];
 
   # Docker with NVIDIA GPU
@@ -15,6 +16,15 @@
     };
   };
 
+  # Coral TPU
+  hardware.coral.usb.enable = true;
+  # hardware.coral.pcie.enable = false;
+
+  # udev rule for Coral TPU
+  # get idVendor and idProduct with 'sudo dmesg'
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="1a6e", ATTRS{idProduct}=="089a", GROUP="plugdev, MODE="0666""
+  '';
 }
 
     # DOCKER COMPOSE SETUP

@@ -81,7 +81,7 @@
   users.users.conny = {
     isNormalUser = true;
     description = "Conny";
-    extraGroups = ["networkmanager" "wheel" "mail"];
+    extraGroups = ["networkmanager" "wheel" "mail" "plugdev"];
     packages = with pkgs; [
       #  thunderbird
     ];

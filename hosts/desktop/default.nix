@@ -85,17 +85,12 @@
     v4l-utils
     qpwgraph
     inputs.zen-browser.packages."${system}".default
-    libedgetpu
   ];
 
   # Fonts
   fonts.packages = with pkgs; [
     google-fonts
   ];
-
-  # Coral TPU
-  hardware.coral.usb.enable = true;
-  hardware.coral.pcie.enable = false;
 
   # Configure mdadm RAID management
   boot.swraid.mdadmConf = ''
