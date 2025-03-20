@@ -8,7 +8,7 @@
     # Import common settings
     ./configuration.nix
     ../../common/tuigreet.nix
-    ../../common/i915.nix
+    # ../../common/i915.nix
     # ../../common/syncthing.nix
     ../../common/pipewire.nix
     ../../common/smartmon.nix
