@@ -111,6 +111,21 @@
     port = 8080;
   };
 
+  # Firewall
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [8971];
+    # allowedUDPPortRanges = [
+    #   {
+    #     from = 4000;
+    #     to = 4007;
+    #   }
+    #   {
+    #     from = 8000;
+    #     to = 8010;
+    #   }
+    # ];
+  };
   # Cron - needed for Backintime
   # services.cron.enable = true;
 
