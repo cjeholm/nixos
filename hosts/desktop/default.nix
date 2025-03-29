@@ -101,6 +101,15 @@
   # Steam
   programs.steam.enable = true;
 
+  # Syncthing
+  services.syncthing = {
+    enable = true;
+    group = "users";
+    user = "conny";
+    dataDir = "/home/conny/syncthing"; # Default folder for new synced folders
+    configDir = "/home/conny/.config/syncthing"; # Folder for Syncthing's settings and keys
+  };
+
   # Ollama LLM
   services.ollama = {
     enable = false;
