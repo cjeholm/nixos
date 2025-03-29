@@ -38,4 +38,12 @@
     wineWowPackages.stable # For Adobe DNG.
     # krita
   ];
+
+  services.syncthing = {
+    enable = true;
+    group = "users";
+    user = "conny";
+    dataDir = "/home/conny/syncthing"; # Default folder for new synced folders
+    configDir = "/home/conny/.config/syncthing"; # Folder for Syncthing's settings and keys
+  };
 }
