@@ -123,7 +123,7 @@
   # Firewall
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [8971];
+    # allowedTCPPorts = [8971];
     # allowedUDPPortRanges = [
     #   {
     #     from = 4000;
