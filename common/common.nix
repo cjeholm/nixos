@@ -40,6 +40,7 @@ in {
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     firefox
+    thunderbird
     mailutils
     scrot-screen
     scrot-window
