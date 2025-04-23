@@ -103,7 +103,7 @@
 
   # Syncthing
   services.syncthing = {
-    enable = true;
+    enable = false;
     group = "users";
     user = "conny";
     dataDir = "/home/conny/syncthing"; # Default folder for new synced folders
