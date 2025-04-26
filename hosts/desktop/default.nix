@@ -67,7 +67,7 @@
     libreoffice
     chirp
     wine64 # For Adobe DNG
-    wineWowPackages.stable # For Adobe DNG.
+    pkgs-stable.wineWowPackages.stable # For Adobe DNG.
     steam
     gimp
     rawtherapee
