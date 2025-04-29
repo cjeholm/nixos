@@ -25,9 +25,11 @@
             gcc
             rustfmt
             rustup
+            lldb
           ];
 
           RUST_BACKTRACE = 1;
+          RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
 
         env.LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
           pkgs.stdenv.cc.cc.lib
