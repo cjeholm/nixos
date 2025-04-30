@@ -22,10 +22,10 @@
           buildInputs = with pkgs; [
             rustc
             cargo
-            gcc
-            rustfmt
             rustup
-            lldb
+            # gcc
+            # rustfmt
+            # lldb
           ];
 
           RUST_BACKTRACE = 1;
@@ -37,7 +37,7 @@
         ];
 
         shellHook = ''
-          echo "yer in a dev shell"
+          echo "Rust dev shell with: rustc, cargo, rustup and env vars for rust-backtrace and rust-src"
         '';
       };
   };
