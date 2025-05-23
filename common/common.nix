@@ -76,6 +76,7 @@ in {
     # pkgs-stable.xz
     kdePackages.okular
     zip
+    presenterm
   ];
 
   # Fonts
