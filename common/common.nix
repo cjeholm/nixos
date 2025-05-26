@@ -77,6 +77,7 @@ in {
     kdePackages.okular
     zip
     presenterm
+    mermaid-cli
   ];
 
   # Fonts
