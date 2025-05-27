@@ -61,7 +61,6 @@ in {
     fastfetch
     btop
     libsForQt5.qt5ct
-    i3lock
     tldr
     bat
     mqttui
@@ -97,6 +96,9 @@ in {
   # Set default shell
   # users.defaultUserShell = pkgs.zsh;
   users.defaultUserShell = pkgs.fish;
+
+  # i3lock for lockscreen
+  programs.i3lock.enable = true;
 
   # Set default shell
   programs.fish = {
