@@ -77,6 +77,7 @@ in {
     zip
     presenterm
     mermaid-cli
+    wiki-tui
   ];
 
   # Fonts
