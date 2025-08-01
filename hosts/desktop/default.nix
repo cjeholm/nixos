@@ -76,7 +76,7 @@
     gromit-mpx
     krita
     kdePackages.kdenlive
-    audacity
+    pkgs-stable.audacity
     ffmpeg
     (blender.override { cudaSupport = true; })
     spotify
