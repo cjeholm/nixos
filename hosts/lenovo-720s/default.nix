@@ -17,6 +17,7 @@
     ../../common/vpn.nix
     ../../common/diskspace.nix
     ../../common/yazi.nix
+    ../../common/rtl-sdr.nix
   ];
 
   # Environment variables
@@ -33,7 +34,7 @@
     pkgs-stable.citrix_workspace_23_09_0
     libreoffice
     chirp
-    pkgs-stable.sdrangel
+    # pkgs-stable.sdrangel
     wine64 # For Adobe DNG
     pkgs-stable.wineWowPackages.stable # For Adobe DNG.
     # krita
