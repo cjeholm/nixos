@@ -28,6 +28,13 @@
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  # Enable binary cache
+  nix.settings.substituters = [
+    "https://cache.garnix.io"
+    "https://cache.nixos.org"
+  ];
+  nix.settings.trusted-public-keys = ["cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="];
+
   # Set your time zone.
   time.timeZone = "Europe/Stockholm";
 
@@ -51,7 +58,7 @@
 
   # Enable the KDE Plasma Desktop Environment.
   #  services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = false;
+  # services.xserver.desktopManager.plasma5.enable = false;
   services.desktopManager.plasma6.enable = false;
 
   # Configure keymap in X11
