@@ -90,7 +90,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    google-fonts
+    # google-fonts
   ];
 
   # Configure mdadm RAID management
