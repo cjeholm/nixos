@@ -78,7 +78,7 @@
     kdePackages.kdenlive
     pkgs-stable.audacity
     ffmpeg
-    (blender.override { cudaSupport = true; })
+    (blender.override {cudaSupport = true;})
     spotify
     inkscape
     vlc
@@ -94,10 +94,11 @@
   ];
 
   # Configure mdadm RAID management
-  # boot.swraid.mdadmConf = ''
-  #   MAILADDR conny@HolmDesktop
-  #   PROGRAM ${pkgs.mailutils}/bin/mail
-  # '';
+  boot.swraid.mdadmConf = ''
+    MAILADDR conny@HolmDesktop
+    PROGRAM /run/current-system/sw/bin/true
+  '';
+  # PROGRAM ${pkgs.mailutils}/bin/mail
 
   # Steam
   programs.steam.enable = true;
