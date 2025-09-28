@@ -1,8 +1,8 @@
 {pkgs, ...}: let
-  borg-fail-mail = import ../scripts/borg-fail-mail.nix {inherit pkgs;};
+  # borg-fail-mail = import ../scripts/borg-fail-mail.nix {inherit pkgs;};
 in {
   environment.systemPackages = with pkgs; [
-    borg-fail-mail
+    # borg-fail-mail
     borgbackup
   ];
 
@@ -37,17 +37,17 @@ in {
   };
 
   # Send mail on failure
-  systemd.services."borgbackup-job-homedir".onFailure = ["mail-on-borg-failure.service"];
+  # systemd.services."borgbackup-job-homedir".onFailure = ["mail-on-borg-failure.service"];
 
   # Here follows a service config for mail notifications on fail
-  systemd.services.mail-on-borg-failure = {
-    description = "Send Email on Borg Failure";
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "/run/current-system/sw/bin/borg-fail-mail";
-    };
+  # systemd.services.mail-on-borg-failure = {
+  #   description = "Send Email on Borg Failure";
+  #   serviceConfig = {
+  #     Type = "oneshot";
+  #     ExecStart = "/run/current-system/sw/bin/borg-fail-mail";
+  #   };
 
     # This service will be triggered only on failure of other services.
-    wantedBy = [];
-  };
+  #   wantedBy = [];
+  # };
 }

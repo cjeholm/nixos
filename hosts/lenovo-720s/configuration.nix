@@ -74,9 +74,9 @@
     isNormalUser = true;
     description = "Conny";
     extraGroups = ["networkmanager" "wheel" "mail" "plugdev"];
-    packages = with pkgs; [
+    # packages = with pkgs; [
       #  thunderbird
-    ];
+    # ];
   };
 
   # Allow unfree packages

@@ -26,7 +26,7 @@ in {
   # Enable local mail server
   # Be adviced! This craeates /var/spool/mail/username as a file and not as a directory. A bug?
   # Delete the file, make a dir, chown it. This drove me crazy.
-  services.postfix.enable = true;
+  # services.postfix.enable = true;
 
   # SSD trimming
   services.fstrim.enable = true;
@@ -41,7 +41,7 @@ in {
   environment.systemPackages = with pkgs; [
     firefox
     thunderbird
-    mailutils
+    # mailutils
     scrot-screen
     scrot-window
     alacritty
