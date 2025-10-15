@@ -39,6 +39,9 @@
     ${pkgs.hdparm}/sbin/hdparm -S 24 /dev/sdf
   '';
 
+  # Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boo
+
   # Monitor order. The names of the outputs can change when Nvidia driver is installed.
   services.xserver.xrandrHeads = [
     {

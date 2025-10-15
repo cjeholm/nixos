@@ -29,6 +29,9 @@
   # HDPI for laptop monitor
   services.xserver.dpi = 180;
 
+  # Bluetooth
+  hardware.bluetooth.powerOnBoot = false; # powers up the default Bluetooth controller on boo
+
   # Host specific packages
   environment.systemPackages = with pkgs; [
     pkgs-stable.citrix_workspace_23_09_0
