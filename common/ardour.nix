@@ -2,7 +2,7 @@
   environment.systemPackages = with pkgs; [
     ardour
     helm
-    surge-XT
+    # surge-XT
     dragonfly-reverb
     sfizz
     # calf
