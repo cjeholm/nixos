@@ -88,7 +88,7 @@
     v4l-utils
     qpwgraph
     inputs.zen-browser.packages."${system}".default
-    inputs.affinity-nix.packages.x86_64-linux.photo
+    # inputs.affinity-nix.packages.x86_64-linux.photo
   ];
 
   # Fonts

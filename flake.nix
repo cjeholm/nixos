@@ -9,7 +9,7 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     # zen-browser.inputs.nixpkgs.follows = "nixpkgs"; # For zen to use the same dependency versions as nixpkgs. Leaner, but can break zen if it's updated separately.
 
-    affinity-nix.url = "github:mrshmllow/affinity-nix";
+    # affinity-nix.url = "github:mrshmllow/affinity-nix";
   };
 
   # Tool for finding specific commits on https://www.nixhub.io/
@@ -17,7 +17,7 @@
   outputs = inputs @ {
     nixpkgs,
     nixpkgs-stable,
-    affinity-nix,
+    # affinity-nix,
     # nixpkgs-pinned,
     ...
   }: let
