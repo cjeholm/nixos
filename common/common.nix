@@ -78,6 +78,7 @@ in {
     presenterm
     mermaid-cli
     wiki-tui
+    pcmanfm
   ];
 
   # Fonts
