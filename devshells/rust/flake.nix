@@ -20,9 +20,9 @@
       pkgs.mkShell
       {
           buildInputs = with pkgs; [
-            # rustc
-            # cargo
-            # rustup
+            rustc
+            cargo
+            rustup
             # gcc
             # rustfmt
             # lldb
