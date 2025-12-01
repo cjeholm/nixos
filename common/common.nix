@@ -79,6 +79,7 @@ in {
     mermaid-cli
     wiki-tui
     pcmanfm
+    viu
   ];
 
   # Fonts
