@@ -81,7 +81,7 @@
     kdePackages.kdenlive
     pkgs-stable.audacity
     ffmpeg
-    (blender.override {cudaSupport = true;})
+    # (blender.override {cudaSupport = true;})
     spotify
     inkscape
     vlc
