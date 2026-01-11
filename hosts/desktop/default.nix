@@ -89,6 +89,7 @@
     qpwgraph
     inputs.zen-browser.packages."${system}".default
     # inputs.affinity-nix.packages.x86_64-linux.photo
+    # opencode
   ];
 
   # Fonts
@@ -118,11 +119,12 @@
   # Ollama LLM
   services.ollama = {
     enable = false;
-    acceleration = "cuda";
+    # acceleration = "cuda";
+    package = pkgs.ollama-cuda;
   };
   services.open-webui = {
     enable = false;
-    port = 8080;
+    port = 8445;
   };
 
   # Firewall
