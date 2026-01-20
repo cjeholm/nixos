@@ -73,7 +73,8 @@
     pkgs-stable.wineWowPackages.stable # For Adobe DNG.
     steam
     gimp
-    rawtherapee
+    # rawtherapee
+    pkgs-stable.rawtherapee
     obs-studio
     cameractrls-gtk4
     gromit-mpx
