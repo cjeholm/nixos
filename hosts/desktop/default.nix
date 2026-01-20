@@ -91,6 +91,7 @@
     inputs.zen-browser.packages."${system}".default
     # inputs.affinity-nix.packages.x86_64-linux.photo
     # opencode
+    sdrpp
   ];
 
   # Fonts
