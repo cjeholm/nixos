@@ -85,12 +85,16 @@ in {
   # Fonts
   # Find font names with > fc-match BlexMono -s | grep Blex
   fonts = {
-    packages = [pkgs.nerd-fonts.blex-mono];
+    packages = with pkgs; [
+      nerd-fonts.blex-mono
+      (google-fonts.override {
+        fonts = ["Slackey"];
+      })
+    ];
+
     fontconfig = {
       enable = true;
       defaultFonts = {
-        # serif = ["BlexMono Nerd Font"];
-        # sansSerif = ["BlexMono Nerd Font"];
         monospace = ["BlexMono Nerd Font"];
       };
     };
