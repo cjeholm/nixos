@@ -55,7 +55,6 @@
           inherit inputs;
         };
       };
-
     };
   };
 }

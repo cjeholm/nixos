@@ -26,7 +26,7 @@
     ../../common/yazi.nix
     ../../common/ardour.nix
     ../../common/rtl-sdr.nix
-    ../../common/wacom.nix
+    # ../../common/wacom.nix
     # ../../common/docker-nvidia.nix
   ];
 
