@@ -1,59 +1,36 @@
 {
-  description = "Conny Holms NixOs Config";
-
+  description = "Conny Holms NixOS Config";
+  
   inputs = {
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-wine.url = "github:NixOS/nixpkgs/nixos-24.05";
-
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs-wine.url = "github:nixos/nixpkgs/nixos-24.05";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    # zen-browser.inputs.nixpkgs.follows = "nixpkgs"; # For zen to use the same dependency versions as nixpkgs. Leaner, but can break zen if it's updated separately.
-    # affinity-nix.url = "github:mrshmllow/affinity-nix";
   };
 
   # Tool for finding specific commits on https://www.nixhub.io/
 
-  outputs = inputs @ {
-    nixpkgs,
-    nixpkgs-stable,
-    nixpkgs-wine,
-    ...
-  }: let
-    system = "x86_64-linux";
-
-    commonArgs = {
+  outputs = { nixpkgs, nixpkgs-stable, nixpkgs-wine, ... } @ inputs: let
+    # Helper function to create pkgs with common config
+    mkPkgs = system: input: import input {
       inherit system;
       config.allowUnfree = true;
     };
-    pkgs-stable = import nixpkgs-stable commonArgs;
-    pkgs-wine = import nixpkgs-wine commonArgs;
+    
+    # Helper to create system configurations
+    mkSystem = system: modules: nixpkgs.lib.nixosSystem {
+      inherit system modules;
+      specialArgs = {
+        pkgs-stable = mkPkgs system nixpkgs-stable;
+        pkgs-wine = mkPkgs system nixpkgs-wine;
+        inherit inputs;
+      };
+    };
   in {
     nixosConfigurations = {
-      # Configurrations by hostname or '--flake .#name'
-
-      HolmDesktop = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./hosts/desktop
-        ];
-        specialArgs = {
-          inherit pkgs-stable;
-          inherit pkgs-wine;
-          inherit inputs;
-        };
-      };
-
-      HolmLaptop = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./hosts/lenovo-720s
-        ];
-        specialArgs = {
-          inherit pkgs-stable;
-          inherit pkgs-wine;
-          inherit inputs;
-        };
-      };
+      HolmDesktop = mkSystem "x86_64-linux" [ ./hosts/desktop ];
+      HolmLaptop = mkSystem "x86_64-linux" [ ./hosts/lenovo-720s ];
+      # HolmPi = mkSystem "aarch64-linux" [ ./hosts/raspberry-pi ];
     };
   };
 }

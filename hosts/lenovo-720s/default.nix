@@ -22,7 +22,6 @@
 
   # Environment variables
   environment.variables = {
-    QT_QPA_PLATFORMTHEME = "qt5ct";
     XCURSOR_SIZE = "32";
   };
 
@@ -34,13 +33,15 @@
 
   # Host specific packages
   environment.systemPackages = with pkgs; [
-    pkgs-stable.citrix_workspace_23_09_0
     libreoffice
     chirp
-    # pkgs-stable.sdrangel
-    wine64 # For Adobe DNG
-    pkgs-wine.wineWowPackages.stable # For Adobe DNG.
-    # krita
+
+    # From stable
+    pkgs-stable.citrix_workspace_23_09_0
+    
+    # Wine flake. Wine 9 for Adobe DNG.
+    pkgs-wine.wine64 # For Adobe DNG
+    pkgs-wine.wineWow64Packages.stable # For Adobe DNG.
   ];
 
   services.syncthing = {

@@ -93,7 +93,7 @@
     pkgs-wine.wineWow64Packages.stable # For Adobe DNG.
 
     # Zen Browser flake
-    inputs.zen-browser.packages."${system}".default
+    inputs.zen-browser.packages."${pkgs.system}".default
 
     # Blender with override for cuda. Compile time!
     # (blender.override {cudaSupport = true;})

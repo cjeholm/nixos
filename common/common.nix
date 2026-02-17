@@ -23,11 +23,6 @@ in {
   # Enable qtile
   services.xserver.windowManager.qtile.enable = true;
 
-  # Enable local mail server
-  # Be adviced! This craeates /var/spool/mail/username as a file and not as a directory. A bug?
-  # Delete the file, make a dir, chown it. This drove me crazy.
-  # services.postfix.enable = true;
-
   # SSD trimming
   services.fstrim.enable = true;
 
@@ -101,7 +96,6 @@ in {
   };
 
   # Set default shell
-  # users.defaultUserShell = pkgs.zsh;
   users.defaultUserShell = pkgs.fish;
 
   # i3lock for lockscreen
@@ -110,10 +104,5 @@ in {
   # Set default shell
   programs.fish = {
     enable = true;
-
-    # This command let's me execute arbitrary binaries downloaded through channels such as mason.
-    # interactiveShellInit = ''
-    #  export NIX_LD=$(nix eval --impure --raw --expr 'let pkgs = import <nixpkgs> {}; NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker"; in NIX_LD')
-    #'';
   };
 }
