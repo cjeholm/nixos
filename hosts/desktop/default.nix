@@ -66,41 +66,43 @@
   # Host specific packages
   environment.systemPackages = with pkgs; [
     mdadm
-    # citrix_workspace_23_09_0
-    pkgs-stable.citrix_workspace_23_11_0
     nvtopPackages.nvidia
     libreoffice
     chirp
-    pkgs-wine.wine64 # For Adobe DNG
-    # pkgs-stable.wineWowPackages.stable # For Adobe DNG.
-    pkgs-wine.wineWow64Packages.stable # For Adobe DNG.
     steam
     gimp
-    # rawtherapee
-    pkgs-stable.rawtherapee
     obs-studio
     cameractrls-gtk4
     gromit-mpx
     krita
     kdePackages.kdenlive
-    pkgs-stable.audacity
     ffmpeg
-    # (blender.override {cudaSupport = true;})
     spotify
     inkscape
     vlc
     v4l-utils
     qpwgraph
+
+    # From stable
+    pkgs-stable.rawtherapee
+    pkgs-stable.audacity
+    pkgs-stable.citrix_workspace_23_11_0
+
+    # Wine flake. Wine 9 for Adobe DNG.
+    pkgs-wine.wine64 # For Adobe DNG
+    pkgs-wine.wineWow64Packages.stable # For Adobe DNG.
+
+    # Zen Browser flake
     inputs.zen-browser.packages."${system}".default
-    # inputs.affinity-nix.packages.x86_64-linux.photo
-    # opencode
-    # sdrpp
+
+    # Blender with override for cuda. Compile time!
+    # (blender.override {cudaSupport = true;})
   ];
 
   # Fonts
-  fonts.packages = with pkgs; [
+  # fonts.packages = with pkgs; [
     # google-fonts
-  ];
+  # ];
 
   # Configure mdadm RAID management
   boot.swraid.mdadmConf = ''
