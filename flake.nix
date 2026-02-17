@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
-    # nixpkgs-pinned.url = "github:nixos/nixpkgs/9cba8883bbb694f4cc3c517abfb5c0b11558943b";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-wine.url = "github:NixOS/nixpkgs/nixos-24.05";
 
@@ -17,8 +16,6 @@
   outputs = inputs @ {
     nixpkgs,
     nixpkgs-stable,
-    # affinity-nix,
-    # nixpkgs-pinned,
     nixpkgs-wine,
     ...
   }: let
@@ -30,7 +27,6 @@
     };
     pkgs-stable = import nixpkgs-stable commonArgs;
     pkgs-wine = import nixpkgs-wine commonArgs;
-    # pkgs-pinned = import nixpkgs-pinned commonArgs;
   in {
     nixosConfigurations = {
       # Configurrations by hostname or '--flake .#name'
@@ -43,7 +39,6 @@
         specialArgs = {
           inherit pkgs-stable;
           inherit pkgs-wine;
-          # inherit pkgs-pinned;
           inherit inputs;
         };
       };
