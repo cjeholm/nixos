@@ -5,10 +5,10 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     # nixpkgs-pinned.url = "github:nixos/nixpkgs/9cba8883bbb694f4cc3c517abfb5c0b11558943b";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-wine.url = "github:NixOS/nixpkgs/nixos-24.05";
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     # zen-browser.inputs.nixpkgs.follows = "nixpkgs"; # For zen to use the same dependency versions as nixpkgs. Leaner, but can break zen if it's updated separately.
-
     # affinity-nix.url = "github:mrshmllow/affinity-nix";
   };
 
@@ -19,6 +19,7 @@
     nixpkgs-stable,
     # affinity-nix,
     # nixpkgs-pinned,
+    nixpkgs-wine,
     ...
   }: let
     system = "x86_64-linux";
@@ -28,6 +29,7 @@
       config.allowUnfree = true;
     };
     pkgs-stable = import nixpkgs-stable commonArgs;
+    pkgs-wine = import nixpkgs-wine commonArgs;
     # pkgs-pinned = import nixpkgs-pinned commonArgs;
   in {
     nixosConfigurations = {
@@ -40,6 +42,7 @@
         ];
         specialArgs = {
           inherit pkgs-stable;
+          inherit pkgs-wine;
           # inherit pkgs-pinned;
           inherit inputs;
         };
@@ -52,6 +55,7 @@
         ];
         specialArgs = {
           inherit pkgs-stable;
+          inherit pkgs-wine;
           inherit inputs;
         };
       };

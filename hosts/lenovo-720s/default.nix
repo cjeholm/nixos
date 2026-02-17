@@ -39,7 +39,7 @@
     chirp
     # pkgs-stable.sdrangel
     wine64 # For Adobe DNG
-    pkgs-stable.wineWowPackages.stable # For Adobe DNG.
+    pkgs-wine.wineWowPackages.stable # For Adobe DNG.
     # krita
   ];
 

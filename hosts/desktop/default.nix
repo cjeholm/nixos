@@ -2,6 +2,7 @@
   config, # config is here for the nvidia module
   pkgs,
   pkgs-stable,
+  pkgs-wine,
   # pkgs-pinned,
   inputs,
   ...
@@ -70,8 +71,9 @@
     nvtopPackages.nvidia
     libreoffice
     chirp
-    wine64 # For Adobe DNG
-    pkgs-stable.wineWowPackages.stable # For Adobe DNG.
+    pkgs-wine.wine64 # For Adobe DNG
+    # pkgs-stable.wineWowPackages.stable # For Adobe DNG.
+    pkgs-wine.wineWow64Packages.stable # For Adobe DNG.
     steam
     gimp
     # rawtherapee
