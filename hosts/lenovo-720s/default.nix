@@ -2,6 +2,7 @@
   config,
   pkgs,
   pkgs-stable,
+  pkgs-wine,
   ...
 }: {
   imports = [
@@ -38,7 +39,7 @@
 
     # From stable
     pkgs-stable.citrix_workspace_23_09_0
-    
+
     # Wine flake. Wine 9 for Adobe DNG.
     pkgs-wine.wine64 # For Adobe DNG
     pkgs-wine.wineWow64Packages.stable # For Adobe DNG.
