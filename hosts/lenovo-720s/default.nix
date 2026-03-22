@@ -32,6 +32,9 @@
   # Bluetooth
   hardware.bluetooth.powerOnBoot = false; # powers up the default Bluetooth controller on boo
 
+  # Battery
+  services.upower.enable = true;
+
   # Host specific packages
   environment.systemPackages = with pkgs; [
     libreoffice
