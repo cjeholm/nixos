@@ -4,7 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
-    nixpkgs-wine.url = "github:nixos/nixpkgs/nixos-24.05";
+    # nixpkgs-wine.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-wine.url = "github:nixos/nixpkgs/b134951a4c9f3c995fd7be05f3243f8ecd65d798";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
