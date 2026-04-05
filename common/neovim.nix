@@ -27,7 +27,8 @@
     markdownlint-cli2 # Linting for markdown
 
     stylua # Lua formatter
-    nodePackages.prettier
+    # nodePackages.prettier
+    prettier
     luajitPackages.jsregexp
 
     xsel # For clipboard

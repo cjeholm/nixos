@@ -15,6 +15,15 @@
     #media-session.enable = true;
   };
 
+  systemd.user.services.restore-volume = {
+    wantedBy = [ "pipewire.service" ];
+    after = [ "pipewire.service" "wireplumber.service" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.4";
+    };
+  };
+
   services.pipewire.extraConfig.pipewire."91-null-sinks" = {
     "context.objects" = [
       {
