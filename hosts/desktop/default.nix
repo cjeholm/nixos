@@ -82,6 +82,7 @@
     vlc
     v4l-utils
     qpwgraph
+    darktable
 
     # From stable
     pkgs-stable.rawtherapee
