@@ -83,7 +83,7 @@ in {
     packages = with pkgs; [
       nerd-fonts.blex-mono
       (google-fonts.override {
-        fonts = ["Slackey"];
+        fonts = ["Slackey" "Covered By Your Grace" "Ms Madi"];
       })
     ];
 
