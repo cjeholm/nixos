@@ -35,6 +35,11 @@
   # Battery
   services.upower.enable = true;
 
+  hardware.graphics.extraPackages = with pkgs; [
+    intel-media-driver
+  ];
+
+
   # Host specific packages
   environment.systemPackages = with pkgs; [
     brightnessctl
