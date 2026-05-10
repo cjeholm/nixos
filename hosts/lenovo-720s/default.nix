@@ -37,6 +37,7 @@
 
   # Host specific packages
   environment.systemPackages = with pkgs; [
+    brightnessctl
     libreoffice
     chirp
 
