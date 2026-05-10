@@ -23,7 +23,8 @@
 
   # Environment variables
   environment.variables = {
-    XCURSOR_SIZE = "32";
+    XCURSOR_THEME = "Bibata-Modern-Classic";
+    XCURSOR_SIZE = "48";
   };
 
   # HDPI for laptop monitor
@@ -42,6 +43,7 @@
 
   # Host specific packages
   environment.systemPackages = with pkgs; [
+    bibata-cursors
     brightnessctl
     libreoffice
     chirp
