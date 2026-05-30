@@ -31,7 +31,7 @@
   services.xserver.dpi = 180;
 
   # Bluetooth
-  hardware.bluetooth.powerOnBoot = false; # powers up the default Bluetooth controller on boo
+  hardware.bluetooth.powerOnBoot = false; # powers up the default Bluetooth controller on boot
 
   # Battery
   services.upower.enable = true;
@@ -40,13 +40,14 @@
     intel-media-driver
   ];
 
-
   # Host specific packages
   environment.systemPackages = with pkgs; [
     bibata-cursors
     brightnessctl
+
     libreoffice
     chirp
+    godot
 
     # From stable
     pkgs-stable.citrix_workspace_23_09_0

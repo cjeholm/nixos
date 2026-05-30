@@ -15,7 +15,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   # boot.kernelParams = ["nomodeset"];
-
+  boot.kernelParams = ["i915.enable_psr=0" "i915.enable_dc=0" "i915.reset=1"];
 
   networking.hostName = "HolmLaptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -66,6 +66,9 @@
   # Configure console keymap
   console.keyMap = "sv-latin1";
 
+  # Power management
+  services.tlp.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -75,7 +78,7 @@
     description = "Conny";
     extraGroups = ["networkmanager" "wheel" "mail" "plugdev"];
     # packages = with pkgs; [
-      #  thunderbird
+    #  thunderbird
     # ];
   };
 
@@ -85,7 +88,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   # environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   # ];
 
   # Some programs need SUID wrappers, can be configured further or are
