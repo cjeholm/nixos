@@ -1,9 +1,13 @@
 {
+  pkgs,
   pkgs-stable,
   ...
 }: {
   environment.systemPackages = [
-    pkgs-stable.sdrangel
+    # pkgs-stable.sdrangel
+    pkgs.sdrangel
+    pkgs.satdump
+    pkgs.zenity
   ];
 
   # Blacklist the DVB driver
