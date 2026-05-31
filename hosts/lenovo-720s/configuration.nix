@@ -15,7 +15,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   # boot.kernelParams = ["nomodeset"];
-  boot.kernelParams = ["i915.enable_psr=0" "i915.enable_dc=0" "i915.reset=1"];
+  # boot.kernelParams = ["i915.enable_psr=0" "i915.enable_dc=0" "i915.reset=1"];
 
   networking.hostName = "HolmLaptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -68,6 +68,13 @@
 
   # Power management
   services.tlp.enable = true;
+  services.logind = {
+    lidSwitch = "ignore";
+    settings.Login = {
+      HandleSuspendKey = "ignore";
+      HandleHibernateKey = "ignore";
+    };
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
