@@ -75,6 +75,7 @@ in {
     wiki-tui
     pcmanfm
     viu
+    qimgv
   ];
 
   # Fonts

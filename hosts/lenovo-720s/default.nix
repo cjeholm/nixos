@@ -49,6 +49,8 @@
     chirp
     godot
 
+    obs-studio
+
     # From stable
     pkgs-stable.citrix_workspace_23_09_0
 
