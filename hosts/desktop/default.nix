@@ -83,6 +83,8 @@
     v4l-utils
     qpwgraph
     darktable
+    godot
+    gdscript-formatter
 
     # From stable
     pkgs-stable.rawtherapee
