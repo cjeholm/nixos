@@ -86,6 +86,9 @@
     godot
     gdscript-formatter
 
+    # opentrack
+    # aitrack
+
     # From stable
     pkgs-stable.rawtherapee
     pkgs-stable.audacity
@@ -98,8 +101,8 @@
     # Zen Browser flake
     inputs.zen-browser.packages."${pkgs.system}".default
 
-    # Blender with override for cuda. Compile time!
-    # (blender.override {cudaSupport = true;})
+    # Blender with override for cuda. CUDA cache for binary.
+    (blender.override {cudaSupport = true;})
   ];
 
   # Fonts
