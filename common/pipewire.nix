@@ -16,11 +16,20 @@
   };
 
   systemd.user.services.restore-volume = {
-    wantedBy = [ "pipewire.service" ];
-    after = [ "pipewire.service" "wireplumber.service" ];
+    wantedBy = ["pipewire.service"];
+    after = ["pipewire.service" "wireplumber.service"];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.4";
+    };
+  };
+
+  services.pipewire.extraConfig.pipewire."10-low-latency" = {
+    "context.properties" = {
+      "default.clock.rate" = 48000;
+      "default.clock.quantum" = 128;
+      "default.clock.min-quantum" = 64;
+      "default.clock.max-quantum" = 1024;
     };
   };
 
