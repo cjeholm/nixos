@@ -5,8 +5,48 @@
   pkgs-wine,
   # pkgs-pinned,
   inputs,
+  lib,
   ...
-}: {
+}: let
+
+  # --- Qtile session-desktop workaround (added 2026-08-25) -----------------
+  # Upstream qtile 0.37.0 renamed its X11 session file from qtile.desktop to
+  # qtile-generic.desktop, but nixpkgs' packaging (and the providedSessions
+  # metadata NixOS checks against) still expects the old qtile.desktop name.
+  # This breaks the `desktops` build step with:
+  #   "Couldn't find provided session name, qtile.desktop, in session
+  #    package python3.14-qtile-0.37.0"
+  #
+  # Fix: build a tiny package that just supplies a correctly-named
+  # qtile.desktop pointing at the real qtile binary, and force it to
+  # *replace* (not append to) services.displayManager.sessionPackages,
+  # since the module's own broken package must be fully excluded — leaving
+  # it in the list still fails validation even alongside a working one.
+  #
+  # Remove this whole block once nixpkgs fixes the desktop-file naming
+  # upstream (check https://github.com/NixOS/nixpkgs for a qtile packaging
+  # fix mentioning qtile-generic.desktop), then revert sessionPackages back
+  # to the module default (i.e. delete this override entirely).
+  #
+  # By removing this line below:
+  # services.displayManager.sessionPackages = lib.mkForce [ qtileDesktopFix ];
+  # ---------------------------------------------------------------------
+
+ qtileDesktopFix = pkgs.writeTextFile {
+  name = "qtile-desktop-fix";
+  destination = "/share/xsessions/qtile.desktop";
+  text = ''
+    [Desktop Entry]
+    Name=Qtile
+    Comment=Qtile Session
+    Exec=${pkgs.python3.pkgs.qtile}/bin/qtile start
+    Type=Application
+    Keywords=wm;tiling
+  '';
+  passthru.providedSessions = [ "qtile" ];
+};
+
+in {
   imports = [
     # Import common settings
     ./configuration.nix
@@ -31,6 +71,9 @@
     # ../../common/docker-nvidia.nix
     # ../../common/docker.nix
   ];
+
+  # qtile fix
+  services.displayManager.sessionPackages = lib.mkForce [ qtileDesktopFix ];
 
   # Set hdd spindown timer. The value of 0 disables spindown, the values from 1 to 240 specify multiples of 5 seconds and values from 241 to 251 specify multiples of 30 minutes.
   systemd.services.hdparm-spindown = {
@@ -70,7 +113,6 @@
   #   (self: super: {
   #     yazi = pkgs-pinned.yazi;
   #   })
-  # ];
 
   # Host specific packages
   environment.systemPackages = with pkgs; [
@@ -111,7 +153,7 @@
     inputs.zen-browser.packages."${pkgs.system}".default
 
     # Blender with override for cuda. CUDA cache for binary.
-    (blender.override {cudaSupport = true;})
+    # (blender.override {cudaSupport = true;})
   ];
 
   # Fonts
