@@ -1,5 +1,22 @@
 {
   "nodes": {
+    "blender-bin": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1766785730,
+        "narHash": "sha256-nkV8QHO5bp6C3a/dRjYxCV1EJtI/R4rSU4RAuunL+Ss=",
+        "rev": "32a73188c4026cea3f8ed97078ace45bf9f7f578",
+        "revCount": 151,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/edolstra/blender-bin/1.0.21/019b5ca3-dbde-7440-9e6b-f78ba88d11c8/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/edolstra/blender-bin/%2A"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -23,18 +40,17 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1788316716,
-        "narHash": "sha256-bc7rSpXIdn9QWGNqfWcPZWOhEVF8NoeAZkWq0XWnf/k=",
-        "owner": "nixos",
+        "lastModified": 1733808091,
+        "narHash": "sha256-KWwINTQelKOoQgrXftxoqxmKFZb9pLVfnRvK270nkVk=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3ed67ec0a4d3c7ab4ae1f04f8ee8df07bfa506a2",
+        "rev": "a0f3e10d94359665dba45b71b4227b0aeb851f8e",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "id": "nixpkgs",
+        "ref": "nixos-24.11",
+        "type": "indirect"
       }
     },
     "nixpkgs-stable": {
@@ -71,6 +87,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1788316716,
+        "narHash": "sha256-bc7rSpXIdn9QWGNqfWcPZWOhEVF8NoeAZkWq0XWnf/k=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "3ed67ec0a4d3c7ab4ae1f04f8ee8df07bfa506a2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1788179007,
         "narHash": "sha256-hn1oU2rue2SYK8dAr8+WNZWtbsz1S2W5mnHlSEuh3bo=",
         "owner": "nixos",
@@ -87,7 +119,8 @@
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs",
+        "blender-bin": "blender-bin",
+        "nixpkgs": "nixpkgs_2",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-wine": "nixpkgs-wine",
         "zen-browser": "zen-browser"
@@ -96,7 +129,7 @@
     "zen-browser": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1788405419,
